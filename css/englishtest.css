@@ -171,6 +171,24 @@ input[type="radio"] {
   display: none;
 }
 
-input:focus {
+input[type="radio"]:checked + .option {
   background-color: #099289;
+  color: #ffffff;
+}
+
+.option {
+  padding: 15px;
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  border: 1px solid #c0bfd2;
+  border-radius: 5px;
+  display: block;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #0992891f;
 }
