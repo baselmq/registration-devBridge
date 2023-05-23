@@ -4,9 +4,641 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>devBridge</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/homepage-style.css" />
+    <title>Document</title>
   </head>
-  <body></body>
-  <script src="js/script.js"></script>
+  <body>
+    <!--Header start-->
+
+    <nav class="navbar navbar-expand-lg pt-3 pb-3 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#hompage"
+          >DevBridge<span>.</span>
+        </a>
+        <svg
+          class="burger-menu octicon octicon-three-bars"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          aria-hidden="true"
+          height="24"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="24"
+          data-view-component="true"
+          style="fill: aliceblue; cursor: pointer"
+        >
+          <path
+            d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+          ></path>
+        </svg>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-4 mx-auto d-flex gap-3"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="#homepage"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light text-light" href="#homepage-about"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#hompage-courses">Courses</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#hompage-team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#hompage-blog">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light text-light" href="#hompage-contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex gap-2">
+            <button class="btn fill-button ps-3 pe-3" type="submit">
+              Sign Up
+            </button>
+            <button class="btn empty-button ps-3 pe-3" type="submit">
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Header end-->
+
+    <!--homepage section start-->
+    <section class="w-100 d-flex align-items-center homepage" id="homepage">
+      <div class="container container-fluid h-100 mt-5">
+        <div class="row h-100 gap-4">
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center text-center gap-3 text-light fs-3 mt-5"
+          >
+            <h1>JOIN OUR <span>BOOTCAMP</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptate, nisi.
+            </p>
+            <div class="d-flex gap-2">
+              <button class="btn empty-button" type="submit">Read More</button>
+              <button class="btn fill-button" type="submit">Join Now</button>
+            </div>
+          </div>
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center text-center"
+          >
+            <img
+              class="home-and-about-img"
+              src="assets/img/hero-img.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--homepage section end-->
+    <!--About section start-->
+    <section
+      class="w-100 pt-5 d-flex align-items-center homepage-about"
+      id="homepage-about"
+    >
+      <div class="container mt-5 container-fluid">
+        <div class="row">
+          <div
+            class="col d-flex flex-column justify-content-center align-items-start gap-5 fs-3"
+          >
+            <h1 class="section-header">About Us</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptate, nisi.
+            </p>
+
+            <button
+              class="btn about-button ps-3 pe-3 align-self-center"
+              type="submit"
+            >
+              Read More
+            </button>
+          </div>
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center text-center"
+          >
+            <img
+              class="home-and-about-img"
+              src="assets/img/aaaaaa.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About section end-->
+
+    <!--Courses section start-->
+    <section
+      class="pt-5 w-100 d-flex flex-column align-items-center hompage-courses gap-5"
+      id="hompage-courses"
+    >
+      <h1 class="section-header text-center pt-5">Our Courses</h1>
+
+      <div class="container container-fluid">
+        <div class="row d-flex">
+          <div
+            class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
+          >
+            <div class="card" style="width: 18rem">
+              <img
+                style="width: 18rem; height: 18rem"
+                src="assets/img/Open source-amico.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Development</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                style="width: 18rem; height: 18rem"
+                src="assets/img/tech company-pana.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Business</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                src="assets/img/Marketing consulting-cuate.svg"
+                class="card-img-top"
+                alt="..."
+                style="width: 18rem; height: 18rem"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Marketing</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                src="assets/img/flow-pana.svg"
+                class="card-img-top"
+                alt="..."
+                style="width: 18rem; height: 18rem"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Design</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn courses-button mb-3" type="submit">See More</button>
+    </section>
+    <!--Courses section end-->
+
+    <!--Team section start-->
+
+    <section
+      class="pt-5 w-100 hompage-team d-flex flex-column gap-5 align-items-center"
+      id="hompage-team"
+    >
+      <h1 class="section-header pt-5">Our Team</h1>
+      <div class="container container-fluid">
+        <div class="row">
+          <div
+            class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
+          >
+            <div class="row gy-4">
+              <div
+                class="col-xl-3 col-md-6 d-flexa align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="member">
+                  <img src="assets/img/team-1.jpg" class="img-fluid" alt="" />
+                  <h4>Suha Badarneh</h4>
+                  <span>Full Stack developer</span>
+                  <div class="social">
+                    <a href="#" class="twitter"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#" class="facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="#" class="linkedin"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="member">
+                  <img src="assets/img/team-2.jpg" class="img-fluid" alt="" />
+                  <h4>Basael Qarqa</h4>
+                  <span>Web development</span>
+                  <div class="social">
+                    <a href="#" class="twitter"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#" class="facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="#" class="linkedin"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="member">
+                  <img src="assets/img/team-3.jpg" class="img-fluid" alt="" />
+                  <h4>William Anderson</h4>
+                  <span>Content</span>
+                  <div class="social">
+                    <a href="#" class="twitter"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#" class="facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="#" class="linkedin"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="member">
+                  <img src="assets/img/team-4.jpg" class="img-fluid" alt="" />
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                  <div class="social">
+                    <a href="#" class="twitter"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#" class="facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="#" class="linkedin"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Team Member -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn courses-button mb-3" type="submit">See More</button>
+    </section>
+
+    <!--Team section end-->
+
+    <!--blog section start-->
+
+    <section
+      class="pt-5 w-100 hompage-blog d-flex flex-column gap-5 align-items-center"
+      id="hompage-blog"
+    >
+      <h1 class="section-header text-center pt-5">Blog</h1>
+      <div class="container container-fluid">
+        <div class="row">
+          <div
+            class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
+          >
+            <div class="row gy-4">
+              <div
+                class="col-xl-3 col-md-6 d-flexa align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="member">
+                  <img src="assets/img/blog-1.jpg" class="img-fluid" alt="" />
+                  <h4>Suha Badarneh</h4>
+                  <span>Full Stack developer</span>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="member">
+                  <img src="assets/img/blog-2.jpg" class="img-fluid" alt="" />
+                  <h4>Basael Qarqa</h4>
+                  <span>Web development</span>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="member">
+                  <img src="assets/img/blog-3.jpg" class="img-fluid" alt="" />
+                  <h4>William Anderson</h4>
+                  <span>Content</span>
+                </div>
+              </div>
+              <!-- End Team Member -->
+
+              <div
+                class="col-xl-3 col-md-6 d-flex"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="member">
+                  <img src="assets/img/blog-4.jpg" class="img-fluid" alt="" />
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                </div>
+              </div>
+              <!-- End Team Member -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn courses-button mb-3" type="submit">See More</button>
+    </section>
+
+    <!--blog section end-->
+
+    <!--Contact section start-->
+
+    <section
+      class="pt-5 w-100 hompage-contact d-flex flex-column gap-5 align-items-center"
+      id="hompage-contact"
+    >
+      <!-- ======= Contact Section ======= -->
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 class="pt-5">Contact</h2>
+          <p>
+            Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
+            porro nihil id ratione ea sunt quis dolorem dolore earum
+          </p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+          <div class="col-lg-4">
+            <div
+              class="info-container d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="info-item d-flex">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Sat: 11AM - 23PM</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form
+              action="forms/contact.php"
+              method="post"
+              role="form"
+              class="php-email-form"
+            >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group mt-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="7"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="send-message-button" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Form -->
+        </div>
+      </div>
+    </section>
+
+    <!--Contact section end-->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span>DevBridge</span>
+            </a>
+            <p>
+              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+              nada terra videa magna derita valies darta donna mare fermentum
+              iaculis eu non diam phasellus.
+            </p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="linkedin"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br />
+              New York, NY 535022<br />
+              United States <br /><br />
+              <strong>Phone:</strong> +1 5589 55488 55<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Impact</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
