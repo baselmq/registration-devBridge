@@ -4,11 +4,13 @@
         margin: 0;
         padding: 0;
         background-color: #099289;
+        min-height: 100vh;
+       
 }
 
 .details-card{
     width: 800px;
-   
+    margin-top: 2rem;
 }
 
 :root{
@@ -136,10 +138,10 @@
 /* ----------------form begin----------------------- */
 
 .form{
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
     background-color: white;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 16px;
 
 }
 
