@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register__page {
+}
+.sign-up-google,
+.sign-up-github {
+  padding: 10px 15px;
+  background-color: #fafafa;
+  border-radius: 56px;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+
+.sign-up-google img,
+.sign-up-github img {
+  width: 25px;
+  height: 25px;
+}
+.register__form h2 {
+  text-align: center;
+  color: #099289;
+  font-size: 26px;
+}
+.image__register {
+  width: 550px;
+  height: 550px;
+}
+@media (min-width: 1400px) {
+  .image__register {
+    margin: 0 100px;
+  }
+}
+
+.btn-custom-register {
+  border: none;
+  outline: 2px solid #099289;
+  background-color: #099289;
+  border-radius: 56px;
+  padding: 8px 25px;
+  font-size: 16px;
+}
+
+.btn-custom-register:hover {
+  transition: 0.4s;
+  outline-offset: 3px;
+  background-color: #099289;
+}
