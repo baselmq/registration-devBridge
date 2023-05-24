@@ -85,12 +85,16 @@
           </ul>
 
           <div class="d-flex gap-2">
-            <button class="btn fill-button ps-3 pe-3" type="submit">
-              Sign Up
-            </button>
-            <button class="btn empty-button ps-3 pe-3" type="submit">
-              Sign In
-            </button>
+            <a href="pages/register.html"
+              ><button class="btn fill-button ps-3 pe-3" type="submit">
+                Sign Up
+              </button></a
+            >
+            <a href="pages/login.html"
+              ><button class="btn empty-button ps-3 pe-3" type="submit">
+                Sign In
+              </button></a
+            >
           </div>
         </div>
       </div>
@@ -107,12 +111,12 @@
           <div
             class="col d-flex flex-column justify-content-center align-items-center text-center gap-3 text-light fs-3 mt-5"
           >
-            <h1>JOIN OUR <span>BOOTCAMP</span></h1>
-            <p>
+            <h1 class="hompage-title">JOIN OUR <span>BOOTCAMP</span></h1>
+            <p class="hompage-text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Voluptate, nisi.
             </p>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 homepage-buttons">
               <button class="btn empty-button" type="submit">Read More</button>
               <button class="btn fill-button" type="submit">Join Now</button>
             </div>
@@ -141,7 +145,7 @@
             class="col d-flex flex-column justify-content-center align-items-start gap-5 fs-3"
           >
             <h1 class="section-header">About Us</h1>
-            <p>
+            <p class="about-text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Voluptate, nisi.
             </p>
@@ -175,6 +179,10 @@
       <h1 class="section-header text-center pt-5">Our Courses</h1>
 
       <div class="container container-fluid">
+        <p class="text-center py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
+          officia?
+        </p>
         <div class="row d-flex">
           <div
             class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
@@ -238,6 +246,10 @@
     >
       <h1 class="section-header pt-5">Our Team</h1>
       <div class="container container-fluid">
+        <p class="text-center py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
+          officia?
+        </p>
         <div class="row">
           <div
             class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
@@ -367,6 +379,10 @@
     >
       <h1 class="section-header text-center pt-5">Blog</h1>
       <div class="container container-fluid">
+        <p class="text-center py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
+          officia?
+        </p>
         <div class="row">
           <div
             class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
@@ -438,7 +454,7 @@
       class="pt-5 w-100 hompage-contact d-flex flex-column gap-5 align-items-center section"
       id="hompage-contact"
     >
-      <div class="container" data-aos="fade-up">
+      <div class="container contact-form" data-aos="fade-up">
         <div class="section-header text-center">
           <h2 class="pt-5">Contact</h2>
         </div>
@@ -640,5 +656,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/homepage.js"></script>
   </body>
 </html>
