@@ -1,4 +1,4 @@
-
+@import "../css/homepage-style.css";
 .details-body {
     font-family: "Poppins", sans-serif;
         margin: 0;
@@ -9,6 +9,11 @@
 .details-card{
     width: 800px;
    
+}
+
+:root{
+    --main-color:#008374;
+    --secondary-color:#F85A40;
 }
 
 /* --------------------Progress step begining---------------------- */
@@ -138,14 +143,23 @@
 
 }
 
-.fill-button{
+.details-next-btn{
+    color:  var(--main-color);
+    background-color:#fff;
+    border-radius: 56px;
+    border: 2px solid var(--main-color);
+    transition: 0.3s;
+    margin-top: 20px;
+    padding: 8px 50px
+    
+    }
+.details-next-btn:hover{
     color:  #fff;
-    background-color:#1a9082;;
+    background-color:var(--main-color);
     border-radius: 56px;
     border: 1px solid #ffffff58;
     transition: 0.3s;
-    
-    }
+}
 
 @media screen and (max-width: 576px) {
     .form, .form input,.details-962, .form-select {
