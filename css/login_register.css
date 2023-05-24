@@ -35,7 +35,24 @@
     margin: 0 100px;
   }
 }
-
+@media (min-width: 769px) and (max-width: 992px) {
+  .image__register {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .image__register {
+    display: none;
+  }
+  .register__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* @media (max-width: 480px) {
+} */
 .btn-custom-register {
   border: none;
   outline: 2px solid #099289;
