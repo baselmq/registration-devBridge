@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("registration-devBridge\css\homepage-style.css");
+/* @import "../css/homepage-style.css"; */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -51,28 +51,50 @@ body {
   width: 800px;
   max-width: 100%;
 }
-.detail-step-wizard-list {
-  background: #f3f3f3;
-  /* box-shadow: 0 15px 25px rgba(0,0,0,0.1); */
-  color: #333;
-  list-style-type: none;
-  border-radius: 10px;
-  display: flex;
-  padding: 20px 10px;
-  position: relative;
-  z-index: 10;
+
+.english-test-ul li {
+  border: none;
 }
 
+input[type="radio"] {
+  display: none;
+  margin: auto;
+}
+
+input[type="radio"]:checked + .option {
+  background-color: #099289;
+  color: #ffffff;
+}
+
+.option {
+  padding: 15px;
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  border: 1px solid #c0bfd2;
+  border-radius: 5px;
+  display: block;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #0992891f;
+}
+/* --------------------Progress step begining---------------------- */
 .detail-step-wizard-list {
   background: #f3f3f3;
-  /* box-shadow: 0 15px 25px rgba(0,0,0,0.1); */
   color: #333;
   list-style-type: none;
-  border-radius: 10px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   display: flex;
   padding: 15px 10px;
   position: relative;
   z-index: 10;
+  margin-bottom: 2px;
+  margin-top: 50px;
 }
 
 .detail-step-wizard-item {
@@ -161,34 +183,10 @@ body {
 .detail-late-item .detail-progress-count {
   color: #099289;
 }
-.english-test-ul li {
-  border: none;
-}
-.english-test-ul input {
-}
 
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"]:checked + .option {
-  background-color: #099289;
-  color: #ffffff;
-}
-
-.option {
-  padding: 15px;
-  font-size: 14.5px;
-  margin-bottom: 10px;
-  border: 1px solid #c0bfd2;
-  border-radius: 5px;
-  display: block;
-}
-
-.option {
-  cursor: pointer;
-}
-
-.option:hover {
-  background-color: #0992891f;
+@media screen and (max-width: 576px) {
+  .detail-progress-label,
+  .detail-progress-count {
+    font-size: 24px;
+  }
 }
