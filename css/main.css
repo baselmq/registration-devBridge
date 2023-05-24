@@ -4,6 +4,7 @@
 @import url("englishtest.css");
 @import url("homepage-style.css");
 @import url("login_register.css");
+@import url("report.css");
 
 * {
   font-family: "Poppins", sans-serif;
