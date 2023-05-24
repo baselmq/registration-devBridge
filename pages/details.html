@@ -21,7 +21,7 @@
     </head>
     <!-- link CSS page -->
     <link rel="stylesheet" href="../css/details.css">
-    <body>
+    <body class="details-body">
 
         <div class="container details-card">
             <!-- progress bar begining -->
@@ -99,28 +99,6 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <label for="validationServer04" class="form-label">Education</label>
-                        <select class="form-select is-invalid"
-                            id="validationServer04"
-                            aria-describedby="validationServer04Feedback"
-                            required>
-                            <option selected disabled value>Choose...</option>
-                            <option>High school</option>
-                            <option>Bachelor</option>
-                            <option>Master</option>
-                            <option>PHD</option>
-                        </select>
-                        <div id="validationServer04Feedback"
-                            class="invalid-feedback">
-                            Please select your education.
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
                         <label for="validationServer04" class="form-label">City</label>
                         <select class="form-select is-invalid"
                             id="validationServer04"
@@ -144,9 +122,50 @@
                             class="invalid-feedback">
                             Please select your city.
                         </div>
+                        
 
                     </div>
 
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04" class="form-label">Education</label>
+                        <select class="form-select is-invalid"
+                            id="validationServer04"
+                            aria-describedby="validationServer04Feedback"
+                            required>
+                            <option selected disabled value>Choose...</option>
+                            <option>High school</option>
+                            <option>Bachelor</option>
+                            <option>Master</option>
+                            <option>PHD</option>
+                        </select>
+                        <div id="validationServer04Feedback"
+                            class="invalid-feedback">
+                            Please select your education.
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="input-group mb-3">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                          </div>      
+
+                    </div>
+
+                </div>
+
+                <div class="row">
                     <div class="col-md-6 mb-3">
                         <form action="/action_page.php">
                             <label style="margin-bottom: 8px;"
@@ -156,12 +175,7 @@
                                 class="w-100 rounded"
                                 style="padding: 0.375rem 0.75rem 0.375rem 0.75rem; border: 0.8px solid var(--bs-form-invalid-border-color);">
                         </form>
-
                     </div>
-
-                </div>
-
-                <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="formFile" class="form-label">Upload
                             Image</label>
@@ -170,10 +184,11 @@
                             style="border: 0.8px solid var(--bs-form-invalid-border-color);">
 
                     </div>
-                    <div class="col-md-6 mb-3 text-center my-auto">
-                        <button class="btn fill-button" type="submit" fdprocessedid="evrcrp">Join Now</button>
+                    
 
-                    </div>
+                </div>
+                <div class="col-md-12 mb-3 text-center my-auto">
+                    <button class="btn fill-button" type="submit" fdprocessedid="evrcrp">Join Now</button>
 
                 </div>
 
