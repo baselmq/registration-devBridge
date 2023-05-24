@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Adding bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <!-- Adding awesome kit -->
+        <script src="https://kit.fontawesome.com/fe93bef9ec.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <!-- link CSS page -->
+    <link rel="stylesheet" href="../css/details.css">
+    <body>
+
+        <div class="container details-card">
+            <!-- progress bar begining -->
+
+            <section class="detail-step-wizard row mb-0">
+                <div class="col-sm-12">
+                    <ul class="detail-step-wizard-list">
+                        <li class="detail-step-wizard-item detail-current-item">
+                            <span class="detail-progress-count">1</span>
+                            <span class="detail-progress-label">Personal
+                                information</span>
+                        </li>
+                        <li class="detail-step-wizard-item detail-late-item">
+                            <span class="detail-progress-count">2</span>
+                            <span class="detail-progress-label">English test</span>
+                        </li>
+                        <li class="detail-step-wizard-item detail-late-item">
+                            <span class="detail-progress-count">3</span>
+                            <span class="detail-progress-label">Technical test</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+            <!-- progress bar ending -->
+
+            <!-- form begining -->
+            <div class="form p-5">
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer01" class="form-label">First
+                            name</label>
+                        <input type="text" class="form-control is-valid"
+                            id="validationServer01" value="Mark" required>
+                        <div class="valid-feedback">
+                            Looks good!
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer02" class="form-label">Last
+                            name</label>
+                        <input type="text" class="form-control is-valid"
+                            id="validationServer02" value="Otto" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServerUsername"
+                            class="form-label">Mobile Number</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text details-962"
+                                id="inputGroupPrepend3">+962</span>
+                            <input type="text"
+                                class="form-control is-invalid"
+                                id="validationServerUsername"
+                                aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                                required>
+                            <div id="validationServerUsernameFeedback"
+                                class="invalid-feedback">
+                                Please write Jordanian mobile number.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04" class="form-label">Education</label>
+                        <select class="form-select is-invalid"
+                            id="validationServer04"
+                            aria-describedby="validationServer04Feedback"
+                            required>
+                            <option selected disabled value>Choose...</option>
+                            <option>High school</option>
+                            <option>Bachelor</option>
+                            <option>Master</option>
+                            <option>PHD</option>
+                        </select>
+                        <div id="validationServer04Feedback"
+                            class="invalid-feedback">
+                            Please select your education.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04" class="form-label">City</label>
+                        <select class="form-select is-invalid"
+                            id="validationServer04"
+                            aria-describedby="validationServer04Feedback"
+                            required>
+                            <option selected disabled value>Choose...</option>
+                            <option>Amman</option>
+                            <option>Zarqa</option>
+                            <option>Jerash</option>
+                            <option>Ajlon</option>
+                            <option>Irbid</option>
+                            <option>Mafraq</option>
+                            <option>Madaba</option>
+                            <option>Balqa</option>
+                            <option>Karak</option>
+                            <option>Tafila</option>
+                            <option>Maan</option>
+                            <option>Aqaba</option>
+                        </select>
+                        <div id="validationServer04Feedback"
+                            class="invalid-feedback">
+                            Please select your city.
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <form action="/action_page.php">
+                            <label style="margin-bottom: 8px;"
+                                for="birthday">Birthday:</label>
+                            <br>
+                            <input type="date" id="birthday" name="birthday"
+                                class="w-100 rounded"
+                                style="padding: 0.375rem 0.75rem 0.375rem 0.75rem; border: 0.8px solid var(--bs-form-invalid-border-color);">
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="formFile" class="form-label">Upload
+                            Image</label>
+                        <input class="form-control" type="file"
+                            id="formFile"
+                            style="border: 0.8px solid var(--bs-form-invalid-border-color);">
+
+                    </div>
+                    <div class="col-md-6 mb-3 text-center my-auto">
+                        <button class="btn fill-button" type="submit" fdprocessedid="evrcrp">Join Now</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- form ending -->
+
+        </div>
+
+    </body>
+</html>
