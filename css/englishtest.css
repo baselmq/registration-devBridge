@@ -9,6 +9,9 @@
 .english-test-body {
   background-color: #099289;
 }
+.english-test-all-content {
+  margin-top: 170px !important;
+}
 .english-test-timer {
   background-color: #efefef;
   padding: 10px 20px;
