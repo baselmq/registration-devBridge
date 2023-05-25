@@ -85,8 +85,10 @@
         </div>
       </div>
     </nav>
-    <div class="container register__page mt-5 pt-3 ">
-      <div class="row d-flex align-items-center pt-5">
+    <div class="container register__page mt-5 pt-3">
+      <div
+        class="row d-flex align-items-center pt-5 d-flex justify-content-around"
+      >
         <!-- image -->
         <div class="col-lg-8 col-md-4 col-sm-12 image__register me-4">
           <!-- <img src="../assets/img/atelier-amico.svg" alt="" /> -->
@@ -100,19 +102,21 @@
         </div>
 
         <!-- form -->
-        <div class="col-lg-4 col-md-6 col-sm-12 register__form ">
-          <h2>Level up your skills. Join our bootCamp now!</h2>
+        <div class="col-lg-4 col-md-6 col-sm-12 register__form">
+          <h4>Level up your skills. Join our bootCamp now!</h4>
           <form>
-            <div class="mb-3 d-flex justify-content-around my-4 mb-3">
+            <div class="mb-3 d-flex justify-content-center my-4 mb-3 gap-3">
               <div class="sign-up-google">
-                <img src="../assets/icon/google.svg" alt="google-logo" /> Sign
-                up with Google
+                <img src="../assets/icon/google.svg" alt="google-logo" />
               </div>
               <div class="sign-up-github">
-                <img src="../assets/icon/github.svg" alt="github-logo" /> Sign
-                up with Google
+                <img src="../assets/icon/facebook.svg" alt="github-logo" />
+              </div>
+              <div class="sign-up-github">
+                <img src="../assets/icon/github.svg" alt="github-logo" />
               </div>
             </div>
+            <div class="or-register text-center position-relative mb-2">OR</div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Username</label
@@ -120,9 +124,7 @@
               <input type="text" class="form-control" />
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
+              <label for="exampleInputEmail1" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
@@ -140,7 +142,7 @@
                 id="exampleInputPassword1"
               />
             </div>
-            <div class="mb-3 form-check">
+            <div class="mb-3 form-check fs-6">
               <input
                 type="checkbox"
                 class="form-check-input"
@@ -150,7 +152,7 @@
                 >I accept the terms & Condition</label
               >
             </div>
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end mt-3">
               <button type="submit" class="btn btn-primary btn-custom-register">
                 Sign up
               </button>

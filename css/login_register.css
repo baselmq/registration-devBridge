@@ -4,14 +4,16 @@
   box-sizing: border-box;
 }
 
-.register__page {
-}
 .sign-up-google,
 .sign-up-github {
-  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   background-color: #fafafa;
-  border-radius: 56px;
-  font-size: 14px;
+  border-radius: 50%;
+  font-size: 12px;
   border: 1px solid #eeeeee;
   cursor: pointer;
 }
@@ -21,24 +23,44 @@
   width: 25px;
   height: 25px;
 }
-.register__form h2 {
+.register__form h4 {
   text-align: center;
   color: #099289;
-  font-size: 26px;
 }
 .image__register {
   width: 550px;
   height: 550px;
 }
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
   .image__register {
     margin: 0 100px;
   }
+} */
+
+.or-register::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 1px;
+  background-color: #eeeeee;
+  top: 45%;
+  left: 22%;
+  transform: translate(-50%);
+}
+.or-register::after {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 1px;
+  background-color: #eeeeee;
+  top: 45%;
+  right: 22%;
+  transform: translate(50%);
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .image__register {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
   }
 }
 @media (max-width: 768px) {
