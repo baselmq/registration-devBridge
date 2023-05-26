@@ -12,6 +12,9 @@
 .english-test-all-content {
   margin-top: 170px !important;
 }
+.english-test-rules-all-content {
+  margin-top: 170px !important;
+}
 .english-test-timer {
   background-color: #efefef;
   padding: 10px 20px;
@@ -51,6 +54,10 @@
   max-width: 100%;
 }
 .english-test-container {
+  width: 800px;
+  max-width: 100%;
+}
+.english-test-rules-container {
   width: 800px;
   max-width: 100%;
 }
@@ -192,4 +199,27 @@ input[type="radio"]:checked + .option {
   .detail-progress-count {
     font-size: 24px;
   }
+}
+.english-test-hidden{
+  display: none; 
+}
+
+
+
+.english-test-rules-btn{
+  color:  var(--main-color);
+  background-color:#fff;
+  border-radius: 56px;
+  border: 2px solid var(--main-color);
+  transition: 0.3s;
+  margin-top: 20px;
+  padding: 8px 50px
+  
+  }
+.english-test-rules-btn:hover{
+  color:  #fff;
+  background-color:var(--main-color);
+  border-radius: 56px;
+  border: 1px solid #ffffff58;
+  transition: 0.3s;
 }

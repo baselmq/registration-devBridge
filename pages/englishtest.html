@@ -22,6 +22,7 @@
     <title>English Test</title>
   </head>
   <body class="english-test-body">
+    <!-- start nav bar -->
     <nav class="navbar navbar-expand-lg pt-3 pb-3 fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand text-light" href="#hompage"
@@ -59,23 +60,35 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-light" href="#../index.htmlhomepage-about"
+              <a
+                class="nav-link text-light text-light"
+                href="#../index.htmlhomepage-about"
                 >About Us</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-courses">Courses</a>
+              <a
+                class="nav-link text-light"
+                href="../index.html#hompage-courses"
+                >Courses</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-team">Team</a>
+              <a class="nav-link text-light" href="../index.html#hompage-team"
+                >Team</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-blog">Blog</a>
+              <a class="nav-link text-light" href="../index.html#hompage-blog"
+                >Blog</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-light text-light" href="../index.html#hompage-contact"
+              <a
+                class="nav-link text-light text-light"
+                href="../index.html#hompage-contact"
                 >Contact</a
               >
             </li>
@@ -89,7 +102,36 @@
         </div>
       </div>
     </nav>
-    <div class="container m-auto english-test-all-content">
+    <!-- end nav bar -->
+
+    <!-- start rules card -->
+
+    <!-- end rules card -->
+    <div class="container m-auto english-test-rules-all-content">
+      <div
+        class="container bg-white p-4 fw-bold rounded english-test-rules-container jus"
+      >
+        <h1 class="text-center">Quiz Rules</h1>
+        <p class="lh-lg">
+          1. This quiz consists of 10 questions. <br />
+          2. Leaving the page during the quiz will result in a score of zero.<br />
+          3. Each participant is allowed only one attempt at the quiz.<br />
+          4. You will have 10 minutes to complete the quiz.<br />
+          5. The page will automatically close after the 10-minute time
+          limit.<br />
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <button type="submit" class="btn english-test-rules-btn m-auto">
+              Attempt Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- start QA Card -->
+    <div class="container m-auto english-test-all-content english-test-hidden">
       <div
         class="container bg-white p-4 fw-bold rounded english-test-container"
       >
@@ -161,7 +203,9 @@
         </div>
       </div>
     </div>
+    <!-- end QA Card -->
   </body>
+  <script src="../js/english-test.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
