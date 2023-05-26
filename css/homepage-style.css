@@ -40,12 +40,20 @@
       .home-and-about-img{
           width: 350px;
           height: 350px;
+         
       }
+      .card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
   }
   @media (max-width:480px){
       .home-and-about-img{
           width: 290px;
           height: 290px;
+          
       }
   }
 nav{
@@ -65,6 +73,9 @@ nav{
 @media (max-width:992px){
   .burger-menu{
       display: block;
+  }
+  .about-row{
+    flex-direction: column;
   }
 }
 .fill-button{
