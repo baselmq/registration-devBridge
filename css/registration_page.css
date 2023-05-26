@@ -1,75 +1,19 @@
-.body__progress {
+.body__registration {
   display: flex;
   justify-content: center;
   align-items: center;
   /* background-color: #099289; */
   background-color: #fbfbfb;
 }
-.container__progress {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.progress__bar {
-  max-width: 800px;
-  width: 100%;
-}
-.progress__bar .steps {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-.steps .circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #999;
-  font-size: 22px;
-  font-weight: 500;
-  border: 4px solid #e0e0e0e0;
-  background-color: #fff;
-}
-.steps .one-circle {
-  border-color: #2057f6;
-  color: #2057f6;
-}
-.steps .two-circle {
-  border-color: #e7314d;
-  color: #e7314d;
-}
-.steps .three-circle {
-  border-color: #f99622;
-  color: #f99622;
-}
-.steps .line__progress {
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background-color: #e0e0e0e0;
-  z-index: -1;
-}
-.line__progress .indicator {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background-color: #2057f6;
-}
 
-/* CARD PROGRESS */
-.card__progress {
+/* card__registration PROGRESS */
+.container__registration {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   gap: 5vw;
 }
-.card {
+.card__registration {
   margin-top: 50px;
   max-width: 300px;
   border-radius: 64px;
@@ -78,9 +22,10 @@
   border: 3px solid #4070f4;
   outline: none;
   position: relative;
+  color: #000;
 }
 
-.card .content__card {
+.card__registration .content__card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,27 +45,27 @@
   font-size: 13px;
   margin: 20px 10px 10px;
 }
-.card:nth-child(1) {
+.card__registration:nth-child(1) {
   border-color: #008274;
 }
-.card:nth-child(1) .content__card {
+.card__registration:nth-child(1) .content__card {
   background: #008274;
   color: #fff;
 }
-.card:nth-child(1) .card__title {
+.card__registration:nth-child(1) .card__title {
   background: linear-gradient(to right, #008274, #008274);
   border: 2px solid #fff;
 }
-.card:nth-child(2) {
+.card__registration:nth-child(2) {
   border-color: #ff725e;
 }
-.card:nth-child(2) .card__title {
+.card__registration:nth-child(2) .card__title {
   background: linear-gradient(to right, #ff725e, #ff725e);
 }
-.card:nth-child(3) {
+.card__registration:nth-child(3) {
   border-color: #ba68c8;
 }
-.card:nth-child(3) .card__title {
+.card__registration:nth-child(3) .card__title {
   background: linear-gradient(to right, #ba68c8, #ba68c8);
 }
 

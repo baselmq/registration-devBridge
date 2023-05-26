@@ -89,3 +89,22 @@
   outline-offset: 3px;
   background-color: #099289;
 }
+
+.invalid input {
+  border-color: #d93025;
+}
+.field .error {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  color: #d93025;
+  font-size: 13px;
+  display: none;
+}
+.invalid .error {
+  display: flex;
+}
+
+.create-password .error {
+  align-items: flex-start;
+}

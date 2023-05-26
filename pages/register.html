@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BoxIcons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -116,7 +121,7 @@
         <!-- form -->
         <div class="col-lg-4 col-md-6 col-sm-12 register__form">
           <h4>Level up your skills. Join our bootCamp now!</h4>
-          <form>
+          <form id="register__form">
             <div class="mb-3 d-flex justify-content-center my-4 mb-3 gap-3">
               <div class="sign-up-google">
                 <img src="../assets/icon/google.svg" alt="google-logo" />
@@ -129,41 +134,67 @@
               </div>
             </div>
             <div class="or-register text-center position-relative mb-2">OR</div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Username</label
               >
               <input type="text" class="form-control" />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
+            </div> -->
+            <!-- ------------- *** Email *** ------------- -->
+            <div class="mb-3 field email-field">
+              <label for="inputEmail" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="inputEmail"
+                placeholder="Enter your email"
                 aria-describedby="emailHelp"
               />
+              <span class="error email-error">Please enter a valid email</span>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+
+            <!-- ------------- *** Password *** ------------- -->
+            <div class="mb-3 field create-password">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword"
+                placeholder="Create password"
+              />
+              <span class="error password-error">
+                Please enter at least 8 character with number, symbol, small and
+                capital letter.</span
+              >
+            </div>
+
+            <!-- ------------- *** Confirm Password *** ------------- -->
+            <div class="mb-3 field confirm-password">
+              <label for="inputConfirmPassword" class="form-label"
+                >Confirm Password</label
               >
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="inputConfirmPassword"
+                placeholder="Confirm password"
               />
+              <span class="error cPassword-error">Password don't match</span>
+
+              <!-- ------------- *** Checkbox *** ------------- -->
             </div>
-            <div class="mb-3 form-check fs-6">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
+            <div class="mb-3 form-check fs-6 field checkbox-field">
+              <input type="checkbox" class="form-check-input" id="checkbox" />
+              <label class="form-check-label" for="checkbox"
                 >I accept the terms & Condition</label
               >
+              <span class="error checkbox-error"
+                >You must agree to the terms and conditions</span
+              >
             </div>
+
+            <!-- ------------- *** Button *** ------------- -->
+
             <div class="d-flex justify-content-end mt-3">
               <button type="submit" class="btn btn-primary btn-custom-register">
                 Sign up
@@ -180,5 +211,6 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="../js/register.js"></script>
 </html>
 <!-- https://assets6.lottiefiles.com/packages/lf20_2TUV98WaqI.json -->

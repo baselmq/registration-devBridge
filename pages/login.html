@@ -52,23 +52,35 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-light" href="../index.html#homepage-about"
+              <a
+                class="nav-link text-light text-light"
+                href="../index.html#homepage-about"
                 >About Us</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-courses">Courses</a>
+              <a
+                class="nav-link text-light"
+                href="../index.html#hompage-courses"
+                >Courses</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-team">Team</a>
+              <a class="nav-link text-light" href="../index.html#hompage-team"
+                >Team</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="../index.html#hompage-blog">Blog</a>
+              <a class="nav-link text-light" href="../index.html#hompage-blog"
+                >Blog</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-light text-light" href="../index.html#hompage-contact"
+              <a
+                class="nav-link text-light text-light"
+                href="../index.html#hompage-contact"
                 >Contact</a
               >
             </li>
@@ -104,7 +116,7 @@
         <!-- form -->
         <div class="col-lg-4 col-md-6 col-sm-12 register__form">
           <h4>Welcome back to the DevBridge Bootcamp</h4>
-          <form>
+          <form id="login__form">
             <div class="mb-3 d-flex justify-content-center my-4 mb-3 gap-3">
               <div class="sign-up-google">
                 <img src="../assets/icon/google.svg" alt="google-logo" />
@@ -118,24 +130,29 @@
             </div>
             <div class="or-register text-center position-relative mb-2">OR</div>
 
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
+            <!-- ------------- *** Email *** ------------- -->
+            <div class="mb-3 field email-field">
+              <label for="inputEmail" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="inputEmail"
+                placeholder="Enter your email"
                 aria-describedby="emailHelp"
               />
+              <span class="error email-error">Please enter a valid email</span>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+
+            <!-- ------------- *** Password *** ------------- -->
+            <div class="mb-3 field password-field">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" />
+              <span class="error password-error">
+                Please enter your password</span
               >
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-              />
+              <span class="field email-pass-field">
+                <span class="error email-pass-error"></span>
+              </span>
             </div>
             <div class="d-flex justify-content-between fs-6">
               <div class="mb-3 form-check">
@@ -148,11 +165,12 @@
                   >Remember me</label
                 >
               </div>
-              <span class="d-block text-decoration-underline"
-                >forget password</span
-              >
+
+              <!-- ------------- *** Forget Password *** ------------- -->
+              <span class="d-block">forget password?</span>
             </div>
 
+            <!-- ------------- *** Button *** ------------- -->
             <div class="d-flex justify-content-end mt-3">
               <button type="submit" class="btn btn-primary btn-custom-register">
                 Sign in
@@ -169,5 +187,6 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="../js/login.js"></script>
 </html>
 <!-- https://assets6.lottiefiles.com/packages/lf20_2TUV98WaqI.json -->
