@@ -74,7 +74,7 @@
               <a class="nav-link text-light" href="#hompage-team">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#hompage-blog">Blog</a>
+              <a class="nav-link text-light" href="#homepage-blog">Blog</a>
             </li>
 
             <li class="nav-item">
@@ -111,14 +111,16 @@
           <div
             class="col d-flex flex-column justify-content-center align-items-center text-center gap-3 text-light fs-3 mt-5"
           >
-            <h1 class="hompage-title">JOIN OUR <span>BOOTCAMP</span></h1>
+            <h1 class="homepage-title">JOIN OUR <span>BOOTCAMP</span></h1>
             <p class="hompage-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptate, nisi.
+              Unlock your full potential with our bootcamp, where dreams become
+              code and passion transforms into innovation
             </p>
             <div class="d-flex gap-2 homepage-buttons">
               <button class="btn empty-button" type="submit">Read More</button>
-              <button class="btn fill-button" type="submit">Join Now</button>
+              <a href="pages/registration_page.html">
+                <button class="btn fill-button" type="submit">Join Now</button>
+              </a>
             </div>
           </div>
           <div
@@ -146,12 +148,16 @@
           >
             <h1 class="section-header">About Us</h1>
             <p class="about-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptate, nisi.
+              At our technology institution, we are more than just a school, we
+              are architects of dreams and catalysts of change. Our mission is
+              to empower individuals with the knowledge, skills, and mindset
+              necessary to shape the digital world. Step into our dynamic
+              community, where passion meets expertise, and together, we'll
+              build a future of endless possibilities
             </p>
 
             <button
-              class="btn about-button ps-3 pe-3 align-self-center"
+              class="btn about-button px-4 align-self-center"
               type="submit"
             >
               Read More
@@ -173,24 +179,24 @@
 
     <!--Courses section start-->
     <section
-      class="pt-5 w-100 d-flex flex-column align-items-center hompage-courses gap-5 section"
+      class="pt-5 w-100 d-flex flex-column align-items-center hompage-courses gap-4 section"
       id="hompage-courses"
     >
       <h1 class="section-header text-center pt-5">Our Courses</h1>
 
       <div class="container container-fluid">
         <p class="text-center py-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-          officia?
+          Unleash your coding potential with our transformative courses, where
+          innovation thrives
         </p>
         <div class="row d-flex">
           <div
             class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
           >
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img
-                style="width: 18rem; height: 18rem"
-                src="assets/img/Open source-amico.svg"
+                style="width: 15rem; height: 18rem"
+                src="assets/img/Hand coding-pana.svg"
                 class="card-img-top"
                 alt="..."
               />
@@ -198,34 +204,34 @@
                 <h5 class="card-title">Development</h5>
               </div>
             </div>
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img
-                style="width: 18rem; height: 18rem"
-                src="assets/img/tech company-pana.svg"
+                style="width: 15rem; height: 18rem"
+                src="assets/img/Prototyping process-bro.svg"
                 class="card-img-top"
                 alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Design</h5>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="assets/img/Marketing consulting-cuate.svg"
+                class="card-img-top"
+                alt="..."
+                style="width: 15rem; height: 18rem"
               />
               <div class="card-body">
                 <h5 class="card-title">Business</h5>
               </div>
             </div>
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/img/Marketing consulting-cuate.svg"
-                class="card-img-top"
-                alt="..."
-                style="width: 18rem; height: 18rem"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Marketing</h5>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img
                 src="assets/img/flow-pana.svg"
                 class="card-img-top"
                 alt="..."
-                style="width: 18rem; height: 18rem"
+                style="width: 15rem; height: 18rem"
               />
               <div class="card-body">
                 <h5 class="card-title">Design</h5>
@@ -234,21 +240,22 @@
           </div>
         </div>
       </div>
-      <button class="btn courses-button mb-3" type="submit">See More</button>
+      <button class="btn courses-button my-5 px-4" type="submit">
+        See More
+      </button>
     </section>
     <!--Courses section end-->
 
     <!--Team section start-->
 
     <section
-      class="pt-5 w-100 hompage-team d-flex flex-column gap-5 align-items-center section"
+      class="pt-5 w-100 hompage-team d-flex flex-column gap-4 align-items-center section"
       id="hompage-team"
     >
       <h1 class="section-header pt-5">Our Team</h1>
       <div class="container container-fluid">
         <p class="text-center py-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-          officia?
+          Passionate experts guiding your transformative tech journey
         </p>
         <div class="row">
           <div
@@ -256,14 +263,14 @@
           >
             <div class="row gy-4">
               <div
-                class="col-xl-3 col-md-6 d-flexa align-items-center"
+                class="col-xl-3 col-md-6 d-flex"
                 data-aos="fade-up"
-                data-aos-delay="100"
+                data-aos-delay="200"
               >
                 <div class="member">
-                  <img src="assets/img/team-1.jpg" class="img-fluid" alt="" />
-                  <h4>Suha Badarneh</h4>
-                  <span>Full Stack developer</span>
+                  <img src="assets/img/Munib.jpg" class="img-fluid" alt="" />
+                  <h4>Munib Dalati</h4>
+                  <span>Web development</span>
                   <div class="social">
                     <a href="#" class="twitter"
                       ><i class="fa-brands fa-twitter"></i
@@ -281,16 +288,15 @@
                 </div>
               </div>
               <!-- End Team Member -->
-
               <div
-                class="col-xl-3 col-md-6 d-flex"
+                class="col-xl-3 col-md-6 d-flexa align-items-center"
                 data-aos="fade-up"
-                data-aos-delay="200"
+                data-aos-delay="100"
               >
                 <div class="member">
-                  <img src="assets/img/team-2.jpg" class="img-fluid" alt="" />
-                  <h4>Basael Qarqa</h4>
-                  <span>Web development</span>
+                  <img src="assets/img/suhaa.jpg" class="img-fluid" alt="" />
+                  <h4>Suha Badarneh</h4>
+                  <span>Full Stack developer</span>
                   <div class="social">
                     <a href="#" class="twitter"
                       ><i class="fa-brands fa-twitter"></i
@@ -315,8 +321,8 @@
                 data-aos-delay="300"
               >
                 <div class="member">
-                  <img src="assets/img/team-3.jpg" class="img-fluid" alt="" />
-                  <h4>William Anderson</h4>
+                  <img src="assets/img/Saeed.jpg" class="img-fluid" alt="" />
+                  <h4>Mohammad Saeed</h4>
                   <span>Content</span>
                   <div class="social">
                     <a href="#" class="twitter"
@@ -342,8 +348,8 @@
                 data-aos-delay="400"
               >
                 <div class="member">
-                  <img src="assets/img/team-4.jpg" class="img-fluid" alt="" />
-                  <h4>Amanda Jepson</h4>
+                  <img src="assets/img/Basel.jpg" class="img-fluid" alt="" />
+                  <h4>Basel Qarqa</h4>
                   <span>Accountant</span>
                   <div class="social">
                     <a href="#" class="twitter"
@@ -366,7 +372,9 @@
           </div>
         </div>
       </div>
-      <button class="btn courses-button mb-3" type="submit">See More</button>
+      <button class="btn courses-button my-5 px-4" type="submit">
+        See More
+      </button>
     </section>
 
     <!--Team section end-->
@@ -374,76 +382,122 @@
     <!--blog section start-->
 
     <section
-      class="pt-5 w-100 hompage-blog d-flex flex-column gap-5 align-items-center section"
-      id="hompage-blog"
+      class="pt-5 w-100 homepage-blog d-flex flex-column gap-4 align-items-center section recent-posts sections-bg"
+      id="homepage-blog"
     >
-      <h1 class="section-header text-center pt-5">Blog</h1>
+      <h1 class="section-header text-center pt-5">Recent Blog Posts</h1>
       <div class="container container-fluid">
         <p class="text-center py-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-          officia?
+          Stay updated with our insightful blogs, where knowledge fuels
+          inspiration and innovation takes center stage
         </p>
         <div class="row">
           <div
             class="col d-flex flex-wrap justify-content-center align-items-center text-center gap-5"
           >
             <div class="row gy-4">
-              <div
-                class="col-xl-3 col-md-6 d-flexa align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div class="member">
-                  <img src="assets/img/blog-1.jpg" class="img-fluid" alt="" />
-                  <h4>Suha Badarneh</h4>
-                  <span>Full Stack developer</span>
-                </div>
-              </div>
-              <!-- End Team Member -->
+              <div class="col-xl-4 col-md-6">
+                <article>
+                  <div class="post-img">
+                    <img src="assets/img/blog-1.jpg" alt="" class="img-fluid" />
+                  </div>
 
-              <div
-                class="col-xl-3 col-md-6 d-flex"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="member">
-                  <img src="assets/img/blog-2.jpg" class="img-fluid" alt="" />
-                  <h4>Basael Qarqa</h4>
-                  <span>Web development</span>
-                </div>
-              </div>
-              <!-- End Team Member -->
+                  <p class="post-category">Development</p>
 
-              <div
-                class="col-xl-3 col-md-6 d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div class="member">
-                  <img src="assets/img/blog-3.jpg" class="img-fluid" alt="" />
-                  <h4>William Anderson</h4>
-                  <span>Content</span>
-                </div>
-              </div>
-              <!-- End Team Member -->
+                  <h2 class="title">
+                    <a href="#" class="text-decoration-none"
+                      >Mastering the Art of Full Stack Development: Unlocking
+                      the Power of End-to-End Solutions</a
+                    >
+                  </h2>
 
-              <div
-                class="col-xl-3 col-md-6 d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div class="member">
-                  <img src="assets/img/blog-4.jpg" class="img-fluid" alt="" />
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/blog-author.jpg"
+                      alt=""
+                      class="img-fluid post-author-img flex-shrink-0"
+                    />
+                    <div class="post-meta">
+                      <p class="post-author">Esraa Waleed</p>
+                      <p class="post-date">
+                        <time datetime="2022-01-01">May 22, 2023</time>
+                      </p>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End Team Member -->
+              <!-- End post list item -->
+
+              <div class="col-xl-4 col-md-6">
+                <article>
+                  <div class="post-img">
+                    <img src="assets/img/blog-2.jpg" alt="" class="img-fluid" />
+                  </div>
+
+                  <p class="post-category">Business</p>
+
+                  <h2 class="title">
+                    <a href="#" class="text-decoration-none"
+                      >Tech Triumph: Navigating a Thriving Business Landscape
+                      with Success.
+                    </a>
+                  </h2>
+
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/blog-author-2.jpg"
+                      alt=""
+                      class="img-fluid post-author-img flex-shrink-0"
+                    />
+                    <div class="post-meta">
+                      <p class="post-author">Amal Ali</p>
+                      <p class="post-date">
+                        <time datetime="2022-01-01">May 20, 2023</time>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- End post list item -->
+
+              <div class="col-xl-4 col-md-6">
+                <article>
+                  <div class="post-img">
+                    <img src="assets/img/blog-3.jpg" alt="" class="img-fluid" />
+                  </div>
+
+                  <p class="post-category">Design</p>
+
+                  <h2 class="title">
+                    <a href="#" class="text-decoration-none"
+                      >The Art of App Design: Crafting User-Centric Experiences
+                      for the Digital Age</a
+                    >
+                  </h2>
+
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/blog-author-3.jpg"
+                      alt=""
+                      class="img-fluid post-author-img flex-shrink-0"
+                    />
+                    <div class="post-meta">
+                      <p class="post-author">Ahmad Mustafa</p>
+                      <p class="post-date">
+                        <time datetime="2022-01-01">May 23, 2023</time>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- End post list item -->
             </div>
           </div>
         </div>
       </div>
-      <button class="btn courses-button mb-3" type="submit">See More</button>
+      <button class="btn courses-button my-5 px-4" type="submit">
+        See More
+      </button>
     </section>
 
     <!--blog section end-->
@@ -451,7 +505,7 @@
     <!--Contact section start-->
 
     <section
-      class="pt-5 w-100 hompage-contact d-flex flex-column gap-5 align-items-center section"
+      class="pt-5 w-100 hompage-contact d-flex flex-column gap-4 align-items-center section"
       id="hompage-contact"
     >
       <div class="container contact-form" data-aos="fade-up">
