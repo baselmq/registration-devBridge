@@ -47,6 +47,7 @@
         display: flex;
         align-items: center;
       }
+     
 
   }
   @media (max-width:480px){
@@ -135,6 +136,7 @@ border-radius: 56px;
   border: 1px solid #ffffff58;
   transition: 0.3s;
 }
+
 
 /*---------------Courses style end---------------------*/ 
 
@@ -535,3 +537,13 @@ color: #fff;
 
 
 /*.---------footer style end ---------------------------*/
+
+
+
+/*.............Bootcamp style start................*/
+
+@media(max-width:768px){
+  .about-bootcamp-row{
+  flex-direction: column;
+  }
+}
