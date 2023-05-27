@@ -101,7 +101,7 @@ function checkAnswer() {
 function finishQuiz() {
   stopTimer();
   saveQuizData();
-  window.location.href = "/pages/registration_page.html";
+  window.location.href = "/registration-devBridge/pages/registration_page.html";
 }
 
 function startTimer() {
@@ -115,8 +115,9 @@ function updateTimer() {
   const currentTime = Date.now();
   const remainingTime = Math.max((startTime - currentTime) / 1000, 0);
   const timerElement = document.querySelector(".technical-test-timer");
-  timerElement.textContent = formatTime(remainingTime);
-
+  timerElement.innerHTML = `<i class="fa-solid fa-stopwatch fa-lg" style="color: #099289"></i>  ${formatTime(
+    remainingTime
+  )}`;
   if (remainingTime === 0) {
     finishQuiz();
   }
@@ -140,7 +141,7 @@ function saveQuizData() {
   quizData.technicalTest = {
     email: userEmail,
     selectedQuestions: selectedQuestions,
-    technicalTestScore: technicalTestScore
+    technicalTestScore: technicalTestScore,
   };
 
   localStorage.setItem("quizData", JSON.stringify(quizData));

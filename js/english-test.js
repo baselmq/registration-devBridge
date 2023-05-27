@@ -92,7 +92,7 @@ function checkAnswer() {
 function finishQuiz() {
   stopTimer();
   saveQuizData();
-  window.location.href = "/pages/registration_page.html";
+  window.location.href = "/registration-devBridge/pages/registration_page.html";
 }
 
 function startTimer() {
@@ -105,7 +105,9 @@ function updateTimer() {
   let currentTime = Date.now();
   let remainingTime = Math.max((startTime - currentTime) / 1000, 0); // Calculate the remaining time in seconds
   let timerElement = document.querySelector(".english-test-timer");
-  timerElement.textContent = formatTime(remainingTime);
+  timerElement.innerHTML = `<i class="fa-solid fa-stopwatch fa-lg" style="color: #099289"></i>  ${formatTime(
+    remainingTime
+  )}`;
 
   if (remainingTime === 0) {
     finishQuiz(); // Automatically finish the quiz when time runs out
