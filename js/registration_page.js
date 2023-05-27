@@ -28,6 +28,12 @@ window.addEventListener("load", function () {
     titleEnglishTest.style = "background: #008274";
     imgCardEnglishTest.src = "../assets/icon/done.svg";
   }
+  if (data.statusTechnicalTest == "Done") {
+    CardTechnicalTest.style = "border-color: #008274;   cursor: initial;";
+    contentTechnicalTest.style = " background: #008274 ;color: #fff;";
+    titleTechnicalTest.style = "background: #008274";
+    imgCardTechnicalTest.src = "../assets/icon/done.svg";
+  }
 });
 
 CardPersonalInfo.addEventListener("click", function () {
@@ -36,5 +42,11 @@ CardPersonalInfo.addEventListener("click", function () {
 CardEnglishTest.addEventListener("click", function () {
   if (data.statusEnglishTest != "Done") {
     window.location.href = "../pages/englishtest.html";
+  }
+});
+
+CardTechnicalTest.addEventListener("click", function () {
+  if (data.statusTechnicalTest != "Done") {
+    window.location.href = "../pages/technival-test.html";
   }
 });
