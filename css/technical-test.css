@@ -1,0 +1,224 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.technical-test-body {
+  background-color: #099289;
+}
+.technical-test-all-content {
+  margin-top: 170px !important;
+}
+.technical-test-rules-all-content {
+  margin-top: 170px !important;
+}
+.technical-test-timer {
+  background-color: #efefef;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time {
+  margin-left: 7px;
+}
+.technical-test-number {
+  color: #099289;
+}
+.technical-test-next-btn {
+  background-color: #099289;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 35px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  border-radius: 56px;
+  outline: 2px solid #099289;
+}
+.technical-test-next-btn:is(:hover, :focus) {
+  background-color: #099289;
+  transition: ease-in 0.3s;
+  outline-offset: 2px;
+}
+.technical-test-progrsee {
+  background-color: #f3f3f3;
+  width: 800px;
+  max-width: 100%;
+}
+.technical-test-container {
+  width: 800px;
+  max-width: 100%;
+}
+.technical-test-rules-container {
+  width: 800px;
+  max-width: 100%;
+}
+
+.technical-test-ul li {
+  border: none;
+}
+
+input[type="radio"] {
+  display: none;
+  margin: auto;
+}
+
+input[type="radio"]:checked + .option {
+  background-color: #099289;
+  color: #ffffff;
+}
+
+.option {
+  padding: 15px;
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  border: 1px solid #c0bfd2;
+  border-radius: 5px;
+  display: block;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #0992891f;
+}
+/* --------------------Progress step begining---------------------- */
+.detail-step-wizard-list {
+  background: #f3f3f3;
+  color: #333;
+  list-style-type: none;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  padding: 15px 10px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 2px;
+  margin-top: 50px;
+}
+
+.detail-step-wizard-item {
+  padding: 0 20px;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 170px;
+  position: relative;
+}
+.detail-step-wizard-item + .detail-step-wizard-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  background: #099289;
+  width: 100%;
+  height: 2px;
+  transform: translateX(-50%);
+  z-index: -10;
+}
+.detail-progress-count {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  color: transparent;
+}
+.detail-progress-count:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background: #099289;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -10;
+}
+.detail-progress-count:before {
+  content: "";
+  height: 10px;
+  width: 20px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%) rotate(-45deg);
+  transform-origin: center center;
+}
+.detail-progress-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.detail-current-item .detail-progress-count:before,
+.detail-current-item ~ .detail-step-wizard-item .detail-progress-count:before {
+  display: none;
+}
+
+.detail-current-item .detail-progress-count {
+  color: white;
+}
+
+.detail-current-item ~ .detail-step-wizard-item .detail-progress-label {
+  opacity: 0.5;
+}
+
+.detail-late-item .detail-progress-count:after {
+  background: #fff;
+  border: 2px solid #099289;
+}
+.detail-late-item .detail-progress-count {
+  color: #099289;
+}
+
+@media screen and (max-width: 576px) {
+  .detail-progress-label,
+  .detail-progress-count {
+    font-size: 24px;
+  }
+}
+.technical-test-hidden{
+  display: none; 
+}
+
+
+
+.technical-test-rules-btn{
+  color:  var(--main-color);
+  background-color:#fff;
+  border-radius: 56px;
+  border: 2px solid var(--main-color);
+  transition: 0.3s;
+  margin-top: 20px;
+  padding: 8px 50px
+  
+  }
+.technical-test-rules-btn:hover{
+  color:  #fff;
+  background-color:var(--main-color);
+  border-radius: 56px;
+  border: 1px solid #ffffff58;
+  transition: 0.3s;
+}

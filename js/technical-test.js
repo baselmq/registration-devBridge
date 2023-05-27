@@ -1,30 +1,35 @@
-const englishTestRulesBtn = document.querySelector(".english-test-rules-btn");
-const englishTestRulesAllContent = document.querySelector(
-  ".english-test-rules-all-content"
+const startButton = document.querySelector(".technical-test-rules-btn");
+const rulesContent = document.querySelector(
+  ".technical-test-rules-all-content"
 );
-const englishTestAllContent = document.querySelector(
-  ".english-test-all-content"
-);
-const quizContainer = document.querySelector(".english-test-container");
-const quizNextBtn = document.querySelector(".english-test-next-btn");
-const userEmail = "h@gmail.com"; // Change this to the user's email
+const testContent = document.querySelector(".technical-test-all-content");
+const container = document.querySelector(".technical-test-container");
+const nextButton = document.querySelector(".technical-test-next-btn");
 
-let selectedQuestions = getRandomQuestions(englishQuestions, 15);
-// Change 15 to the desired number of questions
+const userEmail = "h@gmail.com"; // Change this to the user's email
+const TOTAL_QUESTIONS = 10;
+let selectedQuestions = getRandomQuestions(webTechQuestions, TOTAL_QUESTIONS);
 let currentQuestionIndex = 0;
-let englishTestScore = 0; // Changed the variable name from score to englishTestScore
+let technicalTestScore = 0;
 let startTime = null;
 let timerInterval = null;
 
-englishTestRulesBtn.addEventListener("click", startEnglishTest);
+startButton.addEventListener("click", startTechnicalTest);
+nextButton.addEventListener("click", checkAnswer);
 
-quizNextBtn.addEventListener("click", checkAnswer);
-
-function startEnglishTest() {
-  englishTestRulesAllContent.classList.add("english-test-hidden");
-  englishTestAllContent.classList.remove("english-test-hidden");
+function startTechnicalTest() {
+  hideElement(rulesContent);
+  showElement(testContent);
   displayQuestion();
   startTimer();
+}
+
+function hideElement(element) {
+  element.classList.add("technical-test-hidden");
+}
+
+function showElement(element) {
+  element.classList.remove("technical-test-hidden");
 }
 
 function displayQuestion() {
@@ -32,30 +37,30 @@ function displayQuestion() {
     const currentQuestion = selectedQuestions[currentQuestionIndex];
 
     const questionNumberElement = document.querySelector(
-      ".english-test-number"
+      ".technical-test-number"
     );
     questionNumberElement.textContent = `${currentQuestionIndex + 1} of ${
       selectedQuestions.length
     } Questions`;
 
-    const questionElement = document.querySelector(".english-test-question");
+    const questionElement = document.querySelector(".technical-test-qustion");
     questionElement.textContent = currentQuestion.question;
 
-    const optionsElement = document.querySelector(".english-test-ul");
+    const optionsElement = document.querySelector(".technical-test-ul");
     optionsElement.innerHTML = "";
 
     currentQuestion.options.forEach((option, index) => {
       const inputElement = document.createElement("input");
-      inputElement.type = "radio";
-      inputElement.name = "listGroupRadio";
-      inputElement.value = index;
-      inputElement.id = `option${index}`;
+      inputElement.setAttribute("type", "radio");
+      inputElement.setAttribute("name", "listGroupRadio");
+      inputElement.setAttribute("value", index);
+      inputElement.setAttribute("id", `option${index}`);
       if (currentQuestion.userAnswer === index) {
         inputElement.checked = true;
       }
 
       const labelElement = document.createElement("label");
-      labelElement.htmlFor = `option${index}`;
+      labelElement.setAttribute("for", `option${index}`);
       labelElement.classList.add("form-check-label", "option");
       labelElement.textContent = option;
 
@@ -72,7 +77,7 @@ function displayQuestion() {
 }
 
 function checkAnswer() {
-  const selectedOption = quizContainer.querySelector(
+  const selectedOption = container.querySelector(
     "input[name='listGroupRadio']:checked"
   );
 
@@ -83,7 +88,7 @@ function checkAnswer() {
     currentQuestion.userAnswer = selectedAnswer;
 
     if (selectedAnswer === currentQuestion.answerIndex) {
-      englishTestScore++; // Increment the score when the answer is correct
+      technicalTestScore++;
     }
 
     currentQuestionIndex++;
@@ -95,25 +100,26 @@ function checkAnswer() {
 
 function finishQuiz() {
   stopTimer();
-  alert(`Quiz finished. Your score: ${englishTestScore}`);
+  alert("Quiz finished. Your score: " + technicalTestScore);
   saveQuizData();
   window.location.href = "/registration-devBridge/pages/registration_page.html";
 }
 
 function startTimer() {
-  const totalTime = 10 * 60; // 10 minutes in seconds
-  startTime = Date.now() + totalTime * 1000; // Set the start time as the current time plus the total time in milliseconds
+  const TOTAL_TIME_MINUTES = 10;
+  const totalTime = TOTAL_TIME_MINUTES * 60;
+  startTime = Date.now() + totalTime * 1000;
   timerInterval = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {
   const currentTime = Date.now();
-  const remainingTime = Math.max((startTime - currentTime) / 1000, 0); // Calculate the remaining time in seconds
-  const timerElement = document.querySelector(".english-test-timer");
+  const remainingTime = Math.max((startTime - currentTime) / 1000, 0);
+  const timerElement = document.querySelector(".technical-test-timer");
   timerElement.textContent = formatTime(remainingTime);
 
   if (remainingTime === 0) {
-    finishQuiz(); // Automatically finish the quiz when time runs out
+    finishQuiz();
   }
 }
 
@@ -123,7 +129,7 @@ function stopTimer() {
 
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = Math.round(seconds % 60); // Round the remaining seconds
+  const remainingSeconds = Math.round(seconds % 60);
   return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
     .toString()
     .padStart(2, "0")}`;
@@ -131,9 +137,9 @@ function formatTime(seconds) {
 
 function saveQuizData() {
   localStorage.removeItem(userEmail);
-  const englishTestData = {
+  const technicalTestData = {
     email: userEmail,
-    englishTestScore: englishTestScore,
+    technical_test_score: technicalTestScore,
     answers: selectedQuestions.map((question) => ({
       question: question.question,
       userAnswer: question.userAnswer,
@@ -141,12 +147,11 @@ function saveQuizData() {
     })),
   };
 
-  // Save the quiz data to the local storage
-  localStorage.setItem(userEmail, JSON.stringify(englishTestData));
+  localStorage.setItem(userEmail, JSON.stringify(technicalTestData));
 }
 
 function getRandomQuestions(questions, count) {
   const shuffled = questions.sort(() => Math.random() - 0.5);
-  const uniqueQuestions = Array.from(new Set(shuffled)); // Remove duplicates
+  const uniqueQuestions = Array.from(new Set(shuffled));
   return uniqueQuestions.slice(0, count);
 }
