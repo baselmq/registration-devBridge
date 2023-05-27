@@ -124,8 +124,8 @@
             class="about-bootcamp-row col d-flex justify-content-between align-items-center gap-3"
           >
             <div class="col">
-              <h3>Our Mission</h3>
-              <p class="fs-6">
+              <h3 class="mission-title">Our Mission</h3>
+              <p class="fs-6 mission-content">
                 At our full stack development website, our mission is to empower
                 individuals with the knowledge, skills, and mindset necessary to
                 become proficient and successful in the ever-evolving world of
@@ -140,7 +140,7 @@
               <img
                 src="../assets/img/To the stars-rafiki.svg"
                 style="width: 18rem; height: 15rem"
-                class="card-img-top"
+                class="card-img-top mission-card-image"
                 alt="..."
               />
             </div>
@@ -154,13 +154,13 @@
               <img
                 src="../assets/img/Light bulb-bro.svg"
                 style="width: 18rem; height: 15rem"
-                class="card-img-top"
+                class="card-img-top vision-card-image"
                 alt="..."
               />
             </div>
             <div class="col">
-              <h3>Our Vision</h3>
-              <p class="fs-6">
+              <h3 class="vision-title">Our Vision</h3>
+              <p class="fs-6 vision-content">
                 In our vision for the future, we see a world where technology is
                 a powerful force for positive change and innovation. We envision
                 a society where individuals from all walks of life have access
@@ -176,8 +176,8 @@
             class="col about-bootcamp-row d-flex justify-content-between align-items-center gap-3"
           >
             <div class="col">
-              <h3>Our Value</h3>
-              <p class="fs-6">
+              <h3 class="value-title">Our Value</h3>
+              <p class="fs-6 value-content">
                 At our website, we are driven by a set of core values that
                 define who we are and how we serve our students. These values
                 shape our culture, guide our decisions, and inspire our
@@ -189,7 +189,7 @@
               <img
                 src="../assets/img/Delivery-rafiki.svg"
                 style="width: 18rem; height: 15rem"
-                class="card-img-top"
+                class="card-img-top value-card-image"
                 alt="..."
               />
             </div>
@@ -283,8 +283,28 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
     <!--Scroll Reveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/homepage.js"></script>
+    <script>
+      ScrollReveal({
+        reset: true,
+        distance: "80px",
+        duration: 2000,
+        delay: 200,
+      });
+      ScrollReveal().reveal(
+        ".mission-card-image, .vision-title, .vision-content, .value-card-image",
+        {
+          origin: "right",
+        }
+      );
+      ScrollReveal().reveal(
+        ".mission-title, .mission-content, .vision-card-image, .value-title, .value-content",
+        {
+          origin: "left",
+        }
+      );
+    </script>
   </body>
 </html>
