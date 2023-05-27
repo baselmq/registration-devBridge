@@ -8,17 +8,23 @@ const averageInput = document.getElementById("validationAverage");
 const birthdayInput = document.getElementById("birthday");
 const imgInput = document.getElementById("imageUpload");
 
-//event listener for next button
+// load function to let the informations appears after the user has completed the first stage
 window.addEventListener("load", function () {
   if (dataUser.statusPersonalInformation == "Done") {
     firstNameInput.value = dataUser.fullName.split(" ")[0];
-    lastNameInput.value = dataUser.fullName.split(" ")[1];
-    mobileNumberInput.value = dataUser.MobileNumber.slice(4)
-    
+    lastNameInput.value = dataUser.fullName.substring(dataUser.fullName.indexOf(" ") + 1);
+    mobileNumberInput.value = dataUser.MobileNumber.slice(4);
+    cityInput.value = dataUser.City;
+    educationInput.value = dataUser.Education;
+    averageTypeInput.textContent = dataUser.AverageType;
+    averageInput.value = dataUser.Average
+    birthdayInput.value = dataUser.Birthday
+    imgInput.value = dataUser.Image
+
   }
 });
 
-
+//event listener for next button
 document.addEventListener("DOMContentLoaded", function () {
   var nextButton = document.querySelector(".details-next-btn");
   nextButton.addEventListener("click", function (event) {
