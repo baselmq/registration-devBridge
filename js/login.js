@@ -43,8 +43,7 @@ function checkEmailAndPassInLocalStorage() {
       errorField.classList.add("invalid");
     } else {
       let list = JSON.parse(localStorage.getItem(inputEmail.value));
-      console.log(list[0].password);
-      if (list[0].password != inputPass.value) {
+      if (list.password != inputPass.value) {
         emailPassError.textContent = Incorrect;
         errorField.classList.add("invalid");
       } else {
@@ -69,12 +68,31 @@ form.addEventListener("submit", (e) => {
 
   if (
     !emailField.classList.contains("invalid") &&
-    !passField.classList.contains("invalid")
+    !passField.classList.contains("invalid") &&
+    !errorField.classList.contains("invalid")
   ) {
-    // let list = [{ email: inputEmail.value, password: inputPass.value }];
-    // localStorage.setItem(inputEmail.value, JSON.stringify(list));
+    let list = JSON.parse(localStorage.getItem(inputEmail.value));
+    let currentObj = { ...list };
+    currentObj.status = "login";
+    localStorage.setItem(inputEmail.value, JSON.stringify(currentObj));
+
+    location.href = form.getAttribute("action");
   }
 });
+
+// btnSignOut.addEventListener("click", function () {
+//   let list = JSON.parse(localStorage.getItem(email));
+//   let currentObj = { ...list };
+//   currentObj.status = "logout";
+//   console.log(currentObj);
+//   localStorage.setItem(email, JSON.stringify(currentObj));
+//   // console.log(list.status);
+//   // localStorage.setItem(email, JSON.stringify(list));
+//   window.location.reload;
+//   btnSignIn.style.display = "block";
+//   btnSignUp.style.display = "block";
+//   btnSignOut.classList.add("d-none");
+// });
 
 // form.addEventListener("submit", function (e) {
 //   e.preventDefault();

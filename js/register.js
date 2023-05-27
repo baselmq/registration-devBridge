@@ -87,8 +87,13 @@ form.addEventListener("submit", (e) => {
     !confirmPassField.classList.contains("invalid") &&
     !checkboxField.classList.contains("invalid")
   ) {
-    let list = [{ email: inputEmail.value, password: inputPass.value }];
+    let list = {
+      email: inputEmail.value,
+      password: inputPass.value,
+      status: "login",
+    };
     localStorage.setItem(inputEmail.value, JSON.stringify(list));
+    location.href = form.getAttribute("action");
   }
 });
 

@@ -46,27 +46,32 @@
   margin: 20px 10px 10px;
 }
 .card__registration:nth-child(1) {
-  border-color: #008274;
+  border-color: #fdca3f;
+  cursor: pointer;
 }
 .card__registration:nth-child(1) .content__card {
-  background: #008274;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 .card__registration:nth-child(1) .card__title {
-  background: linear-gradient(to right, #008274, #008274);
+  background: #fdca3f;
   border: 2px solid #fff;
 }
 .card__registration:nth-child(2) {
   border-color: #ff725e;
+  cursor: pointer;
 }
 .card__registration:nth-child(2) .card__title {
-  background: linear-gradient(to right, #ff725e, #ff725e);
+  background:  #ff725e;
+  border: 2px solid #fff;
 }
 .card__registration:nth-child(3) {
   border-color: #ba68c8;
+  cursor: pointer;
 }
 .card__registration:nth-child(3) .card__title {
-  background: linear-gradient(to right, #ba68c8, #ba68c8);
+  background: #ba68c8;
+  border: 2px solid #fff;
 }
 
 .card__title {
