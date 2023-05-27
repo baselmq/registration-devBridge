@@ -9,8 +9,7 @@ let quizContainer = document.querySelector(".english-test-container");
 let quizNextBtn = document.querySelector(".english-test-next-btn");
 let userEmail = "h@gmail.com"; // Change this to the user's email
 
-let selectedQuestions = getRandomQuestions(englishQuestions, 15);
-// Change 15 to the desired number of questions
+let selectedQuestions = getRandomQuestions(englishQuestions, 15); // Change 15 to the desired number of questions
 let currentQuestionIndex = 0;
 let englishTestScore = 0; // Changed the variable name from score to englishTestScore
 let startTime = null;
@@ -23,7 +22,13 @@ english_test_rules_btn.addEventListener("click", function () {
   startTimer();
 });
 
-quizNextBtn.addEventListener("click", checkAnswer);
+quizNextBtn.addEventListener("click", function () {
+  if (currentQuestionIndex < selectedQuestions.length - 1) {
+    checkAnswer();
+  } else {
+    finishQuiz();
+  }
+});
 
 function displayQuestion() {
   if (currentQuestionIndex < selectedQuestions.length) {
@@ -62,6 +67,14 @@ function displayQuestion() {
 
       optionsElement.appendChild(listItemElement);
     });
+
+    if (currentQuestionIndex === selectedQuestions.length - 1) {
+      // Last question, update quizNextBtn to "Finish"
+      quizNextBtn.textContent = "Finish";
+    } else {
+      // Not the last question, update quizNextBtn to "Next"
+      quizNextBtn.textContent = "Next";
+    }
   } else {
     finishQuiz();
   }

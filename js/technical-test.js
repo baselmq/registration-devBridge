@@ -15,7 +15,13 @@ let startTime = null;
 let timerInterval = null;
 
 startButton.addEventListener("click", startTechnicalTest);
-nextButton.addEventListener("click", checkAnswer);
+nextButton.addEventListener("click", function () {
+  if (currentQuestionIndex < selectedQuestions.length - 1) {
+    checkAnswer();
+  } else {
+    finishQuiz();
+  }
+});
 
 function startTechnicalTest() {
   hideElement(rulesContent);
@@ -71,6 +77,14 @@ function displayQuestion() {
 
       optionsElement.appendChild(listItemElement);
     });
+
+    if (currentQuestionIndex === selectedQuestions.length - 1) {
+      // Last question, update nextButton to "Finish"
+      nextButton.textContent = "Finish";
+    } else {
+      // Not the last question, update nextButton to "Next"
+      nextButton.textContent = "Next";
+    }
   } else {
     finishQuiz();
   }
