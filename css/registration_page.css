@@ -62,7 +62,7 @@
   cursor: pointer;
 }
 .card__registration:nth-child(2) .card__title {
-  background:  #ff725e;
+  background: #ff725e;
   border: 2px solid #fff;
 }
 .card__registration:nth-child(3) {

@@ -22,8 +22,19 @@ window.addEventListener("load", function () {
     titlePersonalInfo.style = "background: #008274";
     imgCardPersonalInfo.src = "../assets/icon/done.svg";
   }
+  if (data.statusEnglishTest == "Done") {
+    CardEnglishTest.style = "border-color: #008274;   cursor: initial;";
+    contentEnglishTest.style = " background: #008274 ;color: #fff;";
+    titleEnglishTest.style = "background: #008274";
+    imgCardEnglishTest.src = "../assets/icon/done.svg";
+  }
 });
 
 CardPersonalInfo.addEventListener("click", function () {
   window.location.href = "../pages/details.html";
+});
+CardEnglishTest.addEventListener("click", function () {
+  if (data.statusEnglishTest != "Done") {
+    window.location.href = "../pages/englishtest.html";
+  }
 });

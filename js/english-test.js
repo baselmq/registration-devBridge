@@ -105,7 +105,7 @@ function checkAnswer() {
 function finishQuiz() {
   stopTimer();
   saveQuizData();
-  window.location.href = "/registration-devBridge/pages/registration_page.html";
+  window.location.href = "../pages/registration_page.html";
 }
 
 function startTimer() {
@@ -140,15 +140,15 @@ function formatTime(seconds) {
 }
 
 function saveQuizData() {
-  let quizData = JSON.parse(localStorage.getItem("quizData")) || {};
+  let data = JSON.parse(localStorage.getItem(dataUser.email));
 
-  quizData.englishTest = {
-    email: userEmail,
+  data.englishTest = {
     selectedQuestions: selectedQuestions,
     englishTestScore: englishTestScore,
   };
+  data["statusEnglishTest"] = "Done";
 
-  localStorage.setItem("quizData", JSON.stringify(quizData));
+  localStorage.setItem(dataUser.email, JSON.stringify(data));
 }
 
 function getRandomQuestions(questions, count) {
