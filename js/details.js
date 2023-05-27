@@ -13,8 +13,11 @@ window.addEventListener("load", function () {
   if (dataUser.statusPersonalInformation == "Done") {
     firstNameInput.value = dataUser.fullName.split(" ")[0];
     lastNameInput.value = dataUser.fullName.split(" ")[1];
+    mobileNumberInput.value = dataUser.MobileNumber.slice(4)
+    
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var nextButton = document.querySelector(".details-next-btn");
