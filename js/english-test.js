@@ -1,13 +1,13 @@
-const englishTestRulesBtn = document.querySelector(".english-test-rules-btn");
-const englishTestRulesAllContent = document.querySelector(
+let english_test_rules_btn = document.querySelector(".english-test-rules-btn");
+let english_test_rules_all_content = document.querySelector(
   ".english-test-rules-all-content"
 );
-const englishTestAllContent = document.querySelector(
+let english_test_all_content = document.querySelector(
   ".english-test-all-content"
 );
-const quizContainer = document.querySelector(".english-test-container");
-const quizNextBtn = document.querySelector(".english-test-next-btn");
-const userEmail = "h@gmail.com"; // Change this to the user's email
+let quizContainer = document.querySelector(".english-test-container");
+let quizNextBtn = document.querySelector(".english-test-next-btn");
+let userEmail = "h@gmail.com"; // Change this to the user's email
 
 let selectedQuestions = getRandomQuestions(englishQuestions, 15);
 // Change 15 to the desired number of questions
@@ -16,50 +16,46 @@ let englishTestScore = 0; // Changed the variable name from score to englishTest
 let startTime = null;
 let timerInterval = null;
 
-englishTestRulesBtn.addEventListener("click", startEnglishTest);
+english_test_rules_btn.addEventListener("click", function () {
+  english_test_rules_all_content.classList.add("english-test-hidden");
+  english_test_all_content.classList.remove("english-test-hidden");
+  displayQuestion();
+  startTimer();
+});
 
 quizNextBtn.addEventListener("click", checkAnswer);
 
-function startEnglishTest() {
-  englishTestRulesAllContent.classList.add("english-test-hidden");
-  englishTestAllContent.classList.remove("english-test-hidden");
-  displayQuestion();
-  startTimer();
-}
-
 function displayQuestion() {
   if (currentQuestionIndex < selectedQuestions.length) {
-    const currentQuestion = selectedQuestions[currentQuestionIndex];
+    let currentQuestion = selectedQuestions[currentQuestionIndex];
 
-    const questionNumberElement = document.querySelector(
-      ".english-test-number"
-    );
+    let questionNumberElement = document.querySelector(".english-test-number");
     questionNumberElement.textContent = `${currentQuestionIndex + 1} of ${
       selectedQuestions.length
     } Questions`;
 
-    const questionElement = document.querySelector(".english-test-question");
+    let questionElement = document.querySelector(".english-test-qustion");
     questionElement.textContent = currentQuestion.question;
 
-    const optionsElement = document.querySelector(".english-test-ul");
+    let optionsElement = document.querySelector(".english-test-ul");
     optionsElement.innerHTML = "";
 
     currentQuestion.options.forEach((option, index) => {
-      const inputElement = document.createElement("input");
-      inputElement.type = "radio";
-      inputElement.name = "listGroupRadio";
-      inputElement.value = index;
-      inputElement.id = `option${index}`;
+      let inputElement = document.createElement("input");
+      inputElement.setAttribute("type", "radio");
+      inputElement.setAttribute("name", "listGroupRadio");
+      inputElement.setAttribute("value", index);
+      inputElement.setAttribute("id", `option${index}`);
       if (currentQuestion.userAnswer === index) {
         inputElement.checked = true;
       }
 
-      const labelElement = document.createElement("label");
-      labelElement.htmlFor = `option${index}`;
+      let labelElement = document.createElement("label");
+      labelElement.setAttribute("for", `option${index}`);
       labelElement.classList.add("form-check-label", "option");
       labelElement.textContent = option;
 
-      const listItemElement = document.createElement("li");
+      let listItemElement = document.createElement("li");
       listItemElement.classList.add("list-group-item");
       listItemElement.appendChild(inputElement);
       listItemElement.appendChild(labelElement);
@@ -72,13 +68,13 @@ function displayQuestion() {
 }
 
 function checkAnswer() {
-  const selectedOption = quizContainer.querySelector(
+  let selectedOption = quizContainer.querySelector(
     "input[name='listGroupRadio']:checked"
   );
 
   if (selectedOption) {
-    const selectedAnswer = parseInt(selectedOption.value);
-    const currentQuestion = selectedQuestions[currentQuestionIndex];
+    let selectedAnswer = parseInt(selectedOption.value);
+    let currentQuestion = selectedQuestions[currentQuestionIndex];
 
     currentQuestion.userAnswer = selectedAnswer;
 
@@ -95,21 +91,21 @@ function checkAnswer() {
 
 function finishQuiz() {
   stopTimer();
-  alert(`Quiz finished. Your score: ${englishTestScore}`);
+  alert("Quiz finished. Your score: " + englishTestScore);
   saveQuizData();
-  window.location.href = "/registration-devBridge/pages/registration_page.html";
+  window.location.href = "/pages/registration_page.html";
 }
 
 function startTimer() {
-  const totalTime = 10 * 60; // 10 minutes in seconds
+  let totalTime = 10 * 60; // 10 minutes in seconds
   startTime = Date.now() + totalTime * 1000; // Set the start time as the current time plus the total time in milliseconds
   timerInterval = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {
-  const currentTime = Date.now();
-  const remainingTime = Math.max((startTime - currentTime) / 1000, 0); // Calculate the remaining time in seconds
-  const timerElement = document.querySelector(".english-test-timer");
+  let currentTime = Date.now();
+  let remainingTime = Math.max((startTime - currentTime) / 1000, 0); // Calculate the remaining time in seconds
+  let timerElement = document.querySelector(".english-test-timer");
   timerElement.textContent = formatTime(remainingTime);
 
   if (remainingTime === 0) {
@@ -122,8 +118,8 @@ function stopTimer() {
 }
 
 function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = Math.round(seconds % 60); // Round the remaining seconds
+  let minutes = Math.floor(seconds / 60);
+  let remainingSeconds = Math.round(seconds % 60); // Round the remaining seconds
   return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
     .toString()
     .padStart(2, "0")}`;
@@ -131,9 +127,9 @@ function formatTime(seconds) {
 
 function saveQuizData() {
   localStorage.removeItem(userEmail);
-  const englishTestData = {
+  let english_test_Data = {
     email: userEmail,
-    englishTestScore: englishTestScore,
+    english_test_score: englishTestScore,
     answers: selectedQuestions.map((question) => ({
       question: question.question,
       userAnswer: question.userAnswer,
@@ -142,11 +138,11 @@ function saveQuizData() {
   };
 
   // Save the quiz data to the local storage
-  localStorage.setItem(userEmail, JSON.stringify(englishTestData));
+  localStorage.setItem(userEmail, JSON.stringify(english_test_Data));
 }
 
 function getRandomQuestions(questions, count) {
-  const shuffled = questions.sort(() => Math.random() - 0.5);
-  const uniqueQuestions = Array.from(new Set(shuffled)); // Remove duplicates
+  let shuffled = questions.sort(() => Math.random() - 0.5);
+  let uniqueQuestions = Array.from(new Set(shuffled)); // Remove duplicates
   return uniqueQuestions.slice(0, count);
 }
