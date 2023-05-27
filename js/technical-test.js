@@ -100,9 +100,8 @@ function checkAnswer() {
 
 function finishQuiz() {
   stopTimer();
-  alert("Quiz finished. Your score: " + technicalTestScore);
   saveQuizData();
-  window.location.href = "/registration-devBridge/pages/registration_page.html";
+  window.location.href = "/pages/registration_page.html";
 }
 
 function startTimer() {
@@ -136,18 +135,15 @@ function formatTime(seconds) {
 }
 
 function saveQuizData() {
-  localStorage.removeItem(userEmail);
-  const technicalTestData = {
+  let quizData = JSON.parse(localStorage.getItem("quizData")) || {};
+
+  quizData.technicalTest = {
     email: userEmail,
-    technical_test_score: technicalTestScore,
-    answers: selectedQuestions.map((question) => ({
-      question: question.question,
-      userAnswer: question.userAnswer,
-      correctAnswer: question.answerIndex,
-    })),
+    selectedQuestions: selectedQuestions,
+    technicalTestScore: technicalTestScore
   };
 
-  localStorage.setItem(userEmail, JSON.stringify(technicalTestData));
+  localStorage.setItem("quizData", JSON.stringify(quizData));
 }
 
 function getRandomQuestions(questions, count) {

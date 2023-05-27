@@ -91,7 +91,6 @@ function checkAnswer() {
 
 function finishQuiz() {
   stopTimer();
-  alert("Quiz finished. Your score: " + englishTestScore);
   saveQuizData();
   window.location.href = "/pages/registration_page.html";
 }
@@ -126,19 +125,15 @@ function formatTime(seconds) {
 }
 
 function saveQuizData() {
-  localStorage.removeItem(userEmail);
-  let english_test_Data = {
+  let quizData = JSON.parse(localStorage.getItem("quizData")) || {};
+
+  quizData.englishTest = {
     email: userEmail,
-    english_test_score: englishTestScore,
-    answers: selectedQuestions.map((question) => ({
-      question: question.question,
-      userAnswer: question.userAnswer,
-      correctAnswer: question.answerIndex,
-    })),
+    selectedQuestions: selectedQuestions,
+    englishTestScore: englishTestScore,
   };
 
-  // Save the quiz data to the local storage
-  localStorage.setItem(userEmail, JSON.stringify(english_test_Data));
+  localStorage.setItem("quizData", JSON.stringify(quizData));
 }
 
 function getRandomQuestions(questions, count) {
