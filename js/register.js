@@ -62,7 +62,6 @@ function confirmPass() {
 // Checkbox Validation
 function check_checkbox() {
   if (checkbox.checked) {
-    console.log("checked");
     checkboxField.classList.remove("invalid");
   } else {
     checkboxField.classList.add("invalid");

@@ -42,6 +42,7 @@ function checkEmailAndPassInLocalStorage() {
       emailPassError.textContent = Incorrect;
       errorField.classList.add("invalid");
     } else {
+      // convert json to object
       let list = JSON.parse(localStorage.getItem(inputEmail.value));
       if (list.password != inputPass.value) {
         emailPassError.textContent = Incorrect;
