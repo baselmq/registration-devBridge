@@ -76,12 +76,11 @@
 /* @media (max-width: 480px) {
 } */
 .btn-custom-register {
-  border: none;
-  outline: 2px solid #099289;
-  background-color: #099289;
+  color: var(--main-color);
+  background-color: #fff;
   border-radius: 56px;
-  padding: 8px 25px;
-  font-size: 16px;
+  border: 2px solid var(--main-color);
+  transition: 0.3s;
 }
 
 .btn-custom-register:hover {
