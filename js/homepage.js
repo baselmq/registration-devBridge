@@ -19,13 +19,13 @@ const btnSignUp = document.getElementById("sign__up");
 const btnSignOut = document.getElementById("sign__out");
 const btnJoinNow = document.getElementById("join__now");
 window.localStorage;
-let email = "";
+let data = {};
 window.addEventListener("load", function () {
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     const value = JSON.parse(localStorage.getItem(key));
     if (value.status == "login") {
-      email = value.email;
+      data = value;
       btnSignIn.style.display = "none";
       btnSignUp.style.display = "none";
       btnSignOut.classList.remove("d-none");
@@ -36,10 +36,10 @@ window.addEventListener("load", function () {
 });
 
 btnSignOut.addEventListener("click", function () {
-  let list = JSON.parse(localStorage.getItem(email));
+  let list = JSON.parse(localStorage.getItem(data.email));
   let currentObj = { ...list };
   currentObj.status = "logout";
-  localStorage.setItem(email, JSON.stringify(currentObj));
+  localStorage.setItem(data.email, JSON.stringify(currentObj));
   // console.log(list.status);
   // localStorage.setItem(email, JSON.stringify(list));
   window.location.reload();
@@ -49,21 +49,20 @@ btnSignOut.addEventListener("click", function () {
 });
 
 btnJoinNow.addEventListener("click", function () {
-  let listData = JSON.parse(localStorage.getItem(email));
-  listData["joinNow"] = "joined";
-  localStorage.setItem(email, JSON.stringify(listData));
-
   if (CheckStatus() == "login") {
-    btnJoinNow.setAttribute("href", "pages/login.html");
+    btnJoinNow.setAttribute("href", "pages/register.html");
   } else if (CheckStatus() == "submitted") {
     btnJoinNow.setAttribute("href", "pages/report.html");
   } else {
+    let listData = JSON.parse(localStorage.getItem(data.email));
+    listData["joinNow"] = "joined";
+    localStorage.setItem(data.email, JSON.stringify(listData));
     btnJoinNow.setAttribute("href", "pages/registration_page.html");
   }
 });
 
 function CheckStatus() {
-  let list = JSON.parse(localStorage.getItem(email));
+  let list = JSON.parse(localStorage.getItem(data.email));
   if (list == null) {
     return "login";
   } else if (list.submit == "submitted") {
