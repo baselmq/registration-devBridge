@@ -49,8 +49,14 @@ btnSignOut.addEventListener("click", function () {
 });
 
 btnJoinNow.addEventListener("click", function () {
+  let listData = JSON.parse(localStorage.getItem(email));
+  listData["joinNow"] = "joined";
+  localStorage.setItem(email, JSON.stringify(listData));
+
   if (CheckStatus() == "login") {
     btnJoinNow.setAttribute("href", "pages/login.html");
+  } else if (CheckStatus() == "submitted") {
+    btnJoinNow.setAttribute("href", "pages/report.html");
   } else {
     btnJoinNow.setAttribute("href", "pages/registration_page.html");
   }
@@ -60,6 +66,8 @@ function CheckStatus() {
   let list = JSON.parse(localStorage.getItem(email));
   if (list == null) {
     return "login";
+  } else if (list.submit == "submitted") {
+    return "submitted";
   } else {
     return "registration";
   }

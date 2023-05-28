@@ -108,3 +108,24 @@
 .create-password .error {
   align-items: flex-start;
 }
+
+.text__sign {
+  font-size: 15px;
+}
+.text__sign a {
+  color: #099289;
+}
+.text__sign a:hover {
+  text-decoration: underline !important;
+}
+
+.navbar-sign {
+  color: #099289;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+.navbar-sign:hover {
+  color: #099289;
+}

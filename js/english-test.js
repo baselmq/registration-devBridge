@@ -7,7 +7,6 @@ let english_test_all_content = document.querySelector(
 );
 let quizContainer = document.querySelector(".english-test-container");
 let quizNextBtn = document.querySelector(".english-test-next-btn");
-let userEmail = "h@gmail.com"; // Change this to the user's email
 
 let selectedQuestions = getRandomQuestions(englishQuestions, 15); // Change 15 to the desired number of questions
 let currentQuestionIndex = 0;

@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  gap: 5vw;
+  gap: 20px 5vw;
 }
 .card__registration {
   margin-top: 50px;
@@ -33,6 +33,7 @@
   background-color: #fff;
   border-radius: 44px;
   padding: 20px;
+  height: 100%;
 }
 .content__card img {
   width: 180px;
@@ -45,31 +46,27 @@
   font-size: 13px;
   margin: 20px 10px 10px;
 }
-.card__registration:nth-child(1) {
+.card__registration:nth-child(2) {
   border-color: #fdca3f;
   cursor: pointer;
 }
-.card__registration:nth-child(1) .content__card {
-  background: #fff;
-  color: #000;
-}
-.card__registration:nth-child(1) .card__title {
+.card__registration:nth-child(2) .card__title {
   background: #fdca3f;
   border: 2px solid #fff;
 }
-.card__registration:nth-child(2) {
+.card__registration:nth-child(3) {
   border-color: #ff725e;
   cursor: pointer;
 }
-.card__registration:nth-child(2) .card__title {
+.card__registration:nth-child(3) .card__title {
   background: #ff725e;
   border: 2px solid #fff;
 }
-.card__registration:nth-child(3) {
+.card__registration:nth-child(4) {
   border-color: #ba68c8;
   cursor: pointer;
 }
-.card__registration:nth-child(3) .card__title {
+.card__registration:nth-child(4) .card__title {
   background: #ba68c8;
   border: 2px solid #fff;
 }
@@ -87,4 +84,25 @@
   top: -10%;
   left: 50%;
   transform: translate(-50%);
+}
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.6; /* Optional: You can lower the opacity to indicate the button is disabled /
+  cursor: not-allowed; / Optional: Change the cursor to a "not-allowed" symbol */
+}
+.btn__submit {
+  color: #fff;
+  background-color: #099289;
+  border-radius: 56px;
+  transition: 0.3s;
+  border: 2px solid #099289;
+  margin-top: 20px;
+  padding: 8px 50px;
+}
+.btn__submit:hover {
+  color: #099289;
+  background-color: #fff;
+  border-radius: 56px;
+  border: 2px solid #099289;
+  transition: 0.3s;
 }
