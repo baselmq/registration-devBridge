@@ -86,9 +86,11 @@ form.addEventListener("submit", (e) => {
     !confirmPassField.classList.contains("invalid") &&
     !checkboxField.classList.contains("invalid")
   ) {
+    const encryptionKey = "encryptionKey123";
+    const pass = encryptPassword(inputPass.value, encryptionKey);
     let list = {
       email: inputEmail.value,
-      password: inputPass.value,
+      password: pass,
       status: "login",
     };
     localStorage.setItem(inputEmail.value, JSON.stringify(list));
@@ -96,18 +98,8 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   if (localStorage.getItem(inputEmail.value) === null) {
-//     let arr = [{ email: inputEmail.value, password: inputPass.value }];
-//     localStorage.setItem(inputEmail.value, JSON.stringify(arr));
-//     console.log(localStorage.getItem(inputEmail.value));
-
-//     const newArr1 = arr.map((v) => ({ ...v, isActive: true }));
-//     localStorage.setItem(inputEmail.value, JSON.stringify(newArr1));
-//     console.log(localStorage.getItem(inputEmail.value));
-//     // console.log(JSON.parse(localStorage.getItem(inputEmail.value)));
-//   } else {
-//     // alert("user ");
-//   }
-// });
+// Encrypt the password
+function encryptPassword(password, encryptionKey) {
+  const encryptedData = sjcl.encrypt(encryptionKey, password);
+  return encryptedData;
+}

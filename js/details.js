@@ -12,15 +12,16 @@ const imgInput = document.getElementById("imageUpload");
 window.addEventListener("load", function () {
   if (dataUser.statusPersonalInformation == "Done") {
     firstNameInput.value = dataUser.fullName.split(" ")[0];
-    lastNameInput.value = dataUser.fullName.substring(dataUser.fullName.indexOf(" ") + 1);
+    lastNameInput.value = dataUser.fullName.substring(
+      dataUser.fullName.indexOf(" ") + 1
+    );
     mobileNumberInput.value = dataUser.MobileNumber.slice(4);
     cityInput.value = dataUser.City;
     educationInput.value = dataUser.Education;
     averageTypeInput.textContent = dataUser.AverageType;
-    averageInput.value = dataUser.Average
-    birthdayInput.value = dataUser.Birthday
-    imgInput.value = dataUser.Image
-
+    averageInput.value = dataUser.Average;
+    birthdayInput.value = dataUser.Birthday;
+    imgInput.value = dataUser.Image;
   }
 });
 
@@ -79,8 +80,9 @@ function selectOption(option) {
       "Enter a number between (0-4) with 2 decimal points as maximum"; // Set initial validation error message
   } else if (option === "%") {
     inputElement.setAttribute("type", "number");
-    inputElement.setAttribute("min", "1");
+    inputElement.setAttribute("min", "0");
     inputElement.setAttribute("max", "100");
+    inputElement.setAttribute("step", "0.01");
     inputElement.setAttribute("placeholder", "Enter Percentage (1-100)");
     document.querySelector("#average-invalid-feedback").innerHTML =
       "Enter number between (1-100) with 2 decimal points as maximum"; // Set initial validation error message

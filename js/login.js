@@ -44,7 +44,9 @@ function checkEmailAndPassInLocalStorage() {
     } else {
       // convert json to object
       let list = JSON.parse(localStorage.getItem(inputEmail.value));
-      if (list.password != inputPass.value) {
+      const encryptionKey = "encryptionKey123";
+      let pass = decryptPassword(list.password, encryptionKey);
+      if (pass != inputPass.value) {
         emailPassError.textContent = Incorrect;
         errorField.classList.add("invalid");
       } else {
@@ -88,44 +90,8 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// btnSignOut.addEventListener("click", function () {
-//   let list = JSON.parse(localStorage.getItem(email));
-//   let currentObj = { ...list };
-//   currentObj.status = "logout";
-//   console.log(currentObj);
-//   localStorage.setItem(email, JSON.stringify(currentObj));
-//   // console.log(list.status);
-//   // localStorage.setItem(email, JSON.stringify(list));
-//   window.location.reload;
-//   btnSignIn.style.display = "block";
-//   btnSignUp.style.display = "block";
-//   btnSignOut.classList.add("d-none");
-// });
-
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   if (localStorage.getItem(inputEmail.value) === null) {
-//     let arr = [{ email: inputEmail.value, password: inputPass.value }];
-//     localStorage.setItem(inputEmail.value, JSON.stringify(arr));
-//     console.log(localStorage.getItem(inputEmail.value));
-
-//     const newArr1 = arr.map((v) => ({ ...v, isActive: true }));
-//     localStorage.setItem(inputEmail.value, JSON.stringify(newArr1));
-//     console.log(localStorage.getItem(inputEmail.value));
-//     // console.log(JSON.parse(localStorage.getItem(inputEmail.value)));
-//   } else {
-//     // alert("user ");
-//   }
-// });
-
-// let list = JSON.parse(localStorage.getItem(inputEmail.value));
-// console.log(list[0].password);
-
-// check email in localStorage
-
-// if (localStorage.getItem(inputEmail.value) === null) {
-//   errorField.textContent = notExistEmail;
-//   passField.classList.add("invalid");
-// } else {
-//   passField.classList.remove("invalid");
-// }
+// Decrypt the password
+function decryptPassword(encryptedPassword, encryptionKey) {
+  const decryptedData = sjcl.decrypt(encryptionKey, encryptedPassword);
+  return decryptedData;
+}

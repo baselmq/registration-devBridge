@@ -1,77 +1,79 @@
 .details-body {
-    font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #099289;
-        min-height: 100vh;
-       
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #099289;
+  min-height: 100vh;
 }
 
-.details-card{
-    width: 800px;
-    margin-top: 2rem;
+.details-card {
+  width: 800px;
+  margin-top: 2rem;
 }
 
-:root{
-    --main-color:#008374;
-    --secondary-color:#F85A40;
+:root {
+  --main-color: #008374;
+  --secondary-color: #f85a40;
 }
 
 /* ----------------form begin----------------------- */
 
-.details-introduction{
-    color: var(--main-color);
-    margin-bottom: 15px;
+.details-introduction {
+  color: var(--main-color);
+  margin-bottom: 15px;
 }
-.details-title{
-    font-size: 2rem;
-    text-align: center;
+.details-title {
+  font-size: 2rem;
+  text-align: center;
 }
-#border-left{
-    border-bottom: 1px solid #099289;
-    left: 27%;
-    right: 27%;
-}    
-
-.details-form{
-    background-color: white;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 16px;
-
+#border-left {
+  border-bottom: 1px solid #099289;
+  left: 27%;
+  right: 27%;
 }
 
-.details-next-btn{
-    color:  var(--main-color);
-    background-color:#fff;
-    border-radius: 56px;
-    border: 2px solid var(--main-color);
-    transition: 0.3s;
-    margin-top: 20px;
-    padding: 8px 50px;
-    
-    
-    }
-.details-next-btn:hover{
-    color:  #fff;
-    background-color:var(--main-color);
-    border-radius: 56px;
-    border: 1px solid #ffffff58;
-    transition: 0.3s;
+.details-form {
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 16px;
 }
 
+.details-next-btn {
+  color: var(--main-color);
+  background-color: #fff;
+  border-radius: 56px;
+  border: 2px solid var(--main-color);
+  transition: 0.3s;
+  margin-top: 20px;
+  padding: 8px 50px;
+}
+.details-next-btn:hover {
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 56px;
+  border: 1px solid #ffffff58;
+  transition: 0.3s;
+}
 
-
+#dropdownInput:is(:hover, :active) {
+  color: #000;
+}
 
 @media screen and (max-width: 576px) {
-    .details-title{
-        font-size: 2.8rem;
-        text-align: center;
-    }
-    .details-form, .details-form input, .details-962, .form-select, .details-select, .details-average-type {
-      font-size: 32px;
-    }  
-    .form-select option{
-        font-size: 16px; /* Change the font size of the options inside the downdrop */
+  .details-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .details-form,
+  .details-form input,
+  .details-962,
+  .form-select,
+  .details-select,
+  .details-average-type {
+    font-size: 32px;
+  }
+  .form-select option {
+    font-size: 16px; /* Change the font size of the options inside the downdrop */
   }
 }
