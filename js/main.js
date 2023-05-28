@@ -31,7 +31,6 @@ function signOut() {
   let currentObj = { ...list };
   currentObj.status = "logout";
   localStorage.setItem(dataUser.email, JSON.stringify(currentObj));
-  console.log("object");
   window.location.href = "../index.html";
 
   //   window.location.reload();
