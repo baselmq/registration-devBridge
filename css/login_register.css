@@ -128,3 +128,7 @@
 .navbar-sign:hover {
   color: #099289;
 }
+
+.btn-custom-register:hover {
+  border-color: #099289;
+}

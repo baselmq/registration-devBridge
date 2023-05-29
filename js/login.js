@@ -79,14 +79,13 @@ form.addEventListener("submit", (e) => {
     currentObj.status = "login";
     localStorage.setItem(inputEmail.value, JSON.stringify(currentObj));
 
-    // if (currentObj.submit == "submitted") {
-    //   window.location.href = "../pages/report.html";
-    // } else if (currentObj.joinNow == "joined") {
-    //   window.location.href = "../pages/registration_page.html";
-    // } else {
-    //   location.href = form.getAttribute("action");
-    // }
-    location.href = form.getAttribute("action");
+    if (currentObj.submit == "submitted") {
+      window.location.href = "../pages/report.html";
+    } else if (currentObj.joinNow == "joined") {
+      window.location.href = "../pages/registration_page.html";
+    } else {
+      location.href = form.getAttribute("action");
+    }
   }
 });
 

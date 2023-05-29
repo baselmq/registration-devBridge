@@ -31,20 +31,20 @@
   color: #099289;
 }
 .english-test-next-btn {
-  background-color: #099289;
-  font-weight: bold;
+  background-color: #fff !important;
+  color: #099289 !important;
+  font-weight: 400 !important;
   width: fit-content;
-  padding: 10px 35px;
+  padding: 8px 35px;
   text-align: center;
   font-weight: 300;
   font-size: 16px;
   border-radius: 56px;
-  outline: 2px solid #099289;
+  border: 2px solid #099289;
 }
-.english-test-next-btn:is(:hover, :focus) {
-  background-color: #099289;
-  transition: ease-in 0.3s;
-  outline-offset: 2px;
+.english-test-next-btn:is(:hover, :active) {
+  background-color: #099289 !important;
+  color: #fff !important;
 }
 .english-test-progrsee {
   background-color: #f3f3f3;

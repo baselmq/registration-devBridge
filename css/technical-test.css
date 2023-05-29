@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -32,21 +31,22 @@
   color: #099289;
 }
 .technical-test-next-btn {
-  background-color: #099289;
-  font-weight: bold;
+  background-color: #fff;
+  color: #099289 !important;
+  font-weight: 400 !important;
   width: fit-content;
-  /* padding: 10px 35px; */
+  padding: 8px 35px !important;
   text-align: center;
   font-weight: 300;
   font-size: 16px;
   border-radius: 56px;
-  outline: 2px solid #099289;
+  border: 2px solid #099289;
 }
-.technical-test-next-btn:is(:hover, :focus) {
-  background-color: #099289;
-  transition: ease-in 0.3s;
-  outline-offset: 2px;
+.technical-test-next-btn:is(:hover, :active) {
+  background-color: #099289 !important;
+  color: #fff !important;
 }
+
 .technical-test-progrsee {
   background-color: #f3f3f3;
   width: 800px;
@@ -199,25 +199,22 @@ input[type="radio"]:checked + .option {
     font-size: 24px;
   }
 }
-.technical-test-hidden{
-  display: none; 
+.technical-test-hidden {
+  display: none;
 }
 
-
-
-.technical-test-rules-btn{
-  color:  var(--main-color);
-  background-color:#fff;
+.technical-test-rules-btn {
+  color: var(--main-color);
+  background-color: #fff;
   border-radius: 56px;
   border: 2px solid var(--main-color);
   transition: 0.3s;
   margin-top: 20px;
-  padding: 8px 50px
-  
-  }
-.technical-test-rules-btn:hover{
-  color:  #fff;
-  background-color:var(--main-color);
+  padding: 8px 50px;
+}
+.technical-test-rules-btn:hover {
+  color: #fff;
+  background-color: var(--main-color);
   border-radius: 56px;
   border: 1px solid #ffffff58;
   transition: 0.3s;
