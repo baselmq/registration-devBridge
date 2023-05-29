@@ -94,14 +94,25 @@
             </li>
           </ul>
 
-          <div class="d-flex gap-2">
+          <div class="dropdown">
             <button
-              class="btn fill-button ps-3 pe-3"
-              type="submit"
-              onclick="signOut()"
+              class="btn btn-secondary dropdown-toggle btn_dropdown"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-              Sign out
+              <img src="../assets/img/profile.svg" alt="" id="image__user" />
             </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#" id="name__user">basel</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="signOut()"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -202,9 +213,7 @@
           </ul>
         </div>
         <div class="row d-flex justify-content-end m-1">
-          <button type="button" class="btn english-test-next-btn">
-            Next
-          </button>
+          <button type="button" class="btn english-test-next-btn">Next</button>
         </div>
       </div>
     </div>

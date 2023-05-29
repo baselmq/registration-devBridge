@@ -18,6 +18,7 @@ const btnSignIn = document.getElementById("sign__in");
 const btnSignUp = document.getElementById("sign__up");
 const btnSignOut = document.getElementById("sign__out");
 const btnJoinNow = document.getElementById("join__now");
+const dropdownHome = document.getElementById("dropdown__home");
 window.localStorage;
 let data = {};
 window.addEventListener("load", function () {
@@ -28,10 +29,8 @@ window.addEventListener("load", function () {
       data = value;
       btnSignIn.style.display = "none";
       btnSignUp.style.display = "none";
-      btnSignOut.classList.remove("d-none");
+      dropdownHome.classList.remove("d-none");
     }
-    // console.log(key);
-    // console.log(value.status);
   }
 });
 
@@ -45,7 +44,7 @@ btnSignOut.addEventListener("click", function () {
   window.location.reload();
   btnSignIn.style.display = "block";
   btnSignUp.style.display = "block";
-  btnSignOut.classList.add("d-none");
+  dropdownHome.classList.add("d-none");
 });
 
 btnJoinNow.addEventListener("click", function () {

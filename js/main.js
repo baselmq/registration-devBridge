@@ -1,9 +1,11 @@
+let userEmail = document.getElementById("name__user");
 function loading() {
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     const value = JSON.parse(localStorage.getItem(key));
     if (value.status == "login") {
       let email = value.email;
+      userEmail.textContent = email;
       return JSON.parse(localStorage.getItem(email));
     }
     // console.log(key);
@@ -21,3 +23,14 @@ function signOut() {
 
   //   window.location.reload();
 }
+
+let img = document.getElementById("image__user");
+
+function fetchImage() {
+  if (dataUser.image == undefined) {
+    img.src = "../assets/icon/user.svg";
+  } else {
+    img.src = dataUser.image;
+  }
+}
+fetchImage();

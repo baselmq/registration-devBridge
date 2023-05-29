@@ -11,3 +11,28 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+.dropdown__custom:is(:hover, :active, :focus) {
+  background-color: transparent;
+  border: none;
+}
+.btn_dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.btn_dropdown:is(:hover, :active, :focus) {
+  background-color: transparent !important;
+  border: none;
+}
+
+#image__user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #008374;
+}

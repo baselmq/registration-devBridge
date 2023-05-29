@@ -14,6 +14,21 @@ let technicalTestScore = 0;
 let startTime = null;
 let timerInterval = null;
 
+window.addEventListener("load", function () {
+  if (dataUser != undefined) {
+    startButton.addEventListener("click", startTechnicalTest);
+    nextButton.addEventListener("click", function () {
+      if (currentQuestionIndex < selectedQuestions.length - 1) {
+        checkAnswer();
+      } else {
+        finishQuiz();
+      }
+    });
+  } else {
+    window.location.href = "../pages/login.html";
+  }
+});
+
 startButton.addEventListener("click", startTechnicalTest);
 nextButton.addEventListener("click", function () {
   if (currentQuestionIndex < selectedQuestions.length - 1) {

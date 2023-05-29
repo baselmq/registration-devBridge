@@ -14,6 +14,19 @@ let englishTestScore = 0; // Changed the variable name from score to englishTest
 let startTime = null;
 let timerInterval = null;
 
+window.addEventListener("load", function () {
+  if (dataUser != undefined) {
+    english_test_rules_btn.addEventListener("click", function () {
+      english_test_rules_all_content.classList.add("english-test-hidden");
+      english_test_all_content.classList.remove("english-test-hidden");
+      displayQuestion();
+      startTimer();
+    });
+  } else {
+    window.location.href = "../pages/login.html";
+  }
+});
+
 english_test_rules_btn.addEventListener("click", function () {
   english_test_rules_all_content.classList.add("english-test-hidden");
   english_test_all_content.classList.remove("english-test-hidden");

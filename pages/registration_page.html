@@ -83,15 +83,35 @@
             >
           </li>
         </ul>
-
         <div class="d-flex gap-2">
-          <button
+          <!-- <button
             class="btn fill-button ps-3 pe-3"
             type="submit"
             onclick="signOut()"
           >
             Sign out
-          </button>
+          </button> -->
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle btn_dropdown"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="../assets/img/profile.svg" alt="" id="image__user" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#" id="name__user">basel</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="signOut()"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -105,11 +125,7 @@
       <div class="col-lg-4 card__registration text-decoration-none">
         <div class="card__title">Personal information</div>
         <div class="content__card">
-          <img
-            src="../assets/icon/personal.svg"
-            alt=""
-            class="image__card"
-          />
+          <img src="../assets/icon/personal.svg" alt="" class="image__card" />
           <span
             >Your journey begins with you. Provide your personal information and
             embark on a transformative learning experience tailored just for
@@ -137,7 +153,11 @@
         <div class="card__title">Technical test</div>
 
         <div class="content__card">
-          <img src="../assets/icon/technical-test.svg" alt="" class="image__card" />
+          <img
+            src="../assets/icon/technical-test.svg"
+            alt=""
+            class="image__card"
+          />
           <span
             >Put your technical skills to the test and unlock your potential in
             the world of full stack development. Take our technical assessment
@@ -147,7 +167,10 @@
       </div>
       <div class="row justify-content-center mb-5 mb-lg-2">
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary btn__submit disabled-button">
+          <button
+            type="submit"
+            class="btn btn-primary btn__submit disabled-button"
+          >
             Submit
           </button>
         </div>

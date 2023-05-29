@@ -101,14 +101,30 @@
                 Sign In
               </button></a
             >
-            <a
-              href="#"
-              id="sign__out"
-              class="d-none text-decoration-none text-light"
-              ><button class="btn empty-button px-4" type="submit">
-                Sign Out
-              </button></a
-            >
+            <div class="dropdown d-none" id="dropdown__home">
+              <button
+                class="btn btn-secondary dropdown-toggle btn_dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../assets/img/profile.svg" alt="" id="image__user" />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#" id="name__user">basel</a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="signOut()"
+                    id="sign__out"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

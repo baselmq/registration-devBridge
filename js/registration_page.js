@@ -18,46 +18,59 @@ const btnSubmit = document.querySelector(".btn__submit");
 
 let data = dataUser;
 
-window.addEventListener("load", function () {
-  if (data.statusPersonalInformation == "Done") {
-    CardPersonalInfo.style = "border-color: #008274;";
-    contentPersonalInfo.style = " background: #008274 ;color: #fff;";
-    titlePersonalInfo.style = "background: #008274";
-    imgCardPersonalInfo.src = "../assets/icon/done.svg";
-  }
-  if (data.statusEnglishTest == "Done") {
-    CardEnglishTest.style = "border-color: #008274;   cursor: initial;";
-    contentEnglishTest.style = " background: #008274 ;color: #fff;";
-    titleEnglishTest.style = "background: #008274";
-    imgCardEnglishTest.src = "../assets/icon/done.svg";
-  }
-  if (data.statusTechnicalTest == "Done") {
-    CardTechnicalTest.style = "border-color: #008274;   cursor: initial;";
-    contentTechnicalTest.style = " background: #008274 ;color: #fff;";
-    titleTechnicalTest.style = "background: #008274";
-    imgCardTechnicalTest.src = "../assets/icon/done.svg";
-  }
+const imgUser = document.getElementById("image__user");
+// imgUser.src = data.Image;
 
-  if (
-    data.statusPersonalInformation == "Done" &&
-    data.statusEnglishTest == "Done" &&
-    data.statusTechnicalTest == "Done"
-  ) {
-    btnSubmit.classList.remove("disabled-button");
+window.addEventListener("load", function () {
+  if (dataUser != undefined) {
+    if (data.statusPersonalInformation == "Done") {
+      CardPersonalInfo.style = "border-color: #008274;";
+      contentPersonalInfo.style = " background: #008274 ;color: #fff;";
+      titlePersonalInfo.style = "background: #008274";
+      imgCardPersonalInfo.src = "../assets/icon/done.svg";
+    }
+    if (data.statusEnglishTest == "Done") {
+      CardEnglishTest.style = "border-color: #008274;   cursor: initial;";
+      contentEnglishTest.style = " background: #008274 ;color: #fff;";
+      titleEnglishTest.style = "background: #008274";
+      imgCardEnglishTest.src = "../assets/icon/done.svg";
+    }
+    if (data.statusTechnicalTest == "Done") {
+      CardTechnicalTest.style = "border-color: #008274;   cursor: initial;";
+      contentTechnicalTest.style = " background: #008274 ;color: #fff;";
+      titleTechnicalTest.style = "background: #008274";
+      imgCardTechnicalTest.src = "../assets/icon/done.svg";
+    }
+
+    if (
+      data.statusPersonalInformation == "Done" &&
+      data.statusEnglishTest == "Done" &&
+      data.statusTechnicalTest == "Done"
+    ) {
+      btnSubmit.classList.remove("disabled-button");
+    }
+  } else {
+    window.location.href = "../pages/login.html";
   }
 });
 
 CardPersonalInfo.addEventListener("click", function () {
-  window.location.href = "../pages/details.html";
+  if (dataUser != null) {
+    window.location.href = "../pages/details.html";
+  }
 });
 CardEnglishTest.addEventListener("click", function () {
-  if (data.statusEnglishTest != "Done") {
-    window.location.href = "../pages/englishtest.html";
+  if (dataUser != null) {
+    if (data.statusEnglishTest != "Done") {
+      window.location.href = "../pages/englishtest.html";
+    }
   }
 });
 CardTechnicalTest.addEventListener("click", function () {
-  if (data.statusTechnicalTest != "Done") {
-    window.location.href = "../pages/technival-test.html";
+  if (dataUser != null) {
+    if (data.statusTechnicalTest != "Done") {
+      window.location.href = "../pages/technival-test.html";
+    }
   }
 });
 
@@ -75,3 +88,4 @@ btnSubmit.addEventListener("click", function () {
   localStorage.setItem(dataUser.email, JSON.stringify(newData));
   window.location.href = "../pages/report.html";
 });
+
