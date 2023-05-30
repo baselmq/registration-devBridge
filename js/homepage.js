@@ -70,3 +70,14 @@ function CheckStatus() {
     return "registration";
   }
 }
+
+let img = document.getElementById("image__user");
+
+function fetchImage() {
+  if (dataUser.image == undefined) {
+    img.src = "../assets/icon/user.svg";
+  } else {
+    img.src = dataUser.image;
+  }
+}
+fetchImage();

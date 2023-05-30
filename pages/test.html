@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="file-input-element" />
+    <img src="" alt="" id="image" />
+    <button id="submit-button">submit</button>
+    <script>
+      document
+        .getElementById("submit-button")
+        .addEventListener("click", function () {
+          // Get the selected image file from the input element
+          var file = document.getElementById("file-input-element").files[0];
+
+          // Create a FileReader object to read the file
+          var reader = new FileReader();
+
+          // Set up the onload event handler to execute when the file is read
+          reader.onload = function (e) {
+            // Get the image data from the FileReader as a base64-encoded string
+            var imageData = e.target.result;
+
+            // Save the image data to localStorage
+            localStorage.setItem("imageData", imageData);
+          };
+
+          // Read the selected file as a data URL
+          reader.readAsDataURL(file);
+        });
+
+      //   bannerImage = document.getElementById("bannerImg");
+      //   imgData = getBase64Image(bannerImage);
+      //   localStorage.setItem("imgData", imgData);
+      //   function getBase64Image(img) {
+      //     var canvas = document.createElement("canvas");
+      //     canvas.width = img.width;
+      //     canvas.height = img.height;
+
+      //     var ctx = canvas.getContext("2d");
+      //     ctx.drawImage(img, 0, 0);
+
+      //     var dataURL = canvas.toDataURL("image/png");
+
+      //     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+      //   }
+      // Get all variables
+      //   var bannerImage = document.getElementById("file-input-element");
+      //   var img = document.getElementById("image");
+
+      //   // Add a change listener to the file input to inspect the uploaded file.
+      //   bannerImage.addEventListener("change", function () {
+      //     var file = this.files[0];
+      //     // Basic type checking.
+      //     if (file.type.indexOf("image") < 0) {
+      //       alert("invalid type");
+      //       return;
+      //     }
+      //     // Create a file reader
+      //     var fReader = new FileReader();
+      //     // Add complete behavior
+      //     fReader.onload = function () {
+      //       // Show the uploaded image to banner.
+      //       img.src = fReader.result;
+      //       // Save it when data complete.
+      //       localStorage.setItem("imgData", fReader.result);
+      //     };
+      //     // Read the file to DataURL format.
+      //     fReader.readAsDataURL(file);
+      //   });
+
+      //   // To display the image on the next page, you can use this function
+      //   function fetchimage() {
+      //     var dataImage = localStorage.getItem("imgData");
+      //     img.src = dataImage;
+      //   }
+
+      //   const inputEl = document.getElementById("file-input-element");
+      //   // Gets input element
+      //   inputEl.addEventListener("change", () => {
+      //     // Listens for new input file
+
+      //     const file = inputEl.files[0];
+      //     // Gets file from input element
+
+      //     const fr = new FileReader();
+      //     // Creates new FileReader object
+
+      //     fr.readAsDataURL(file);
+      //     // Set FileReader to output data as URL string
+
+      //     fr.addEventListener("load", () => {
+      //       // Waits for file reading to be complete
+
+      //       const url = fr.result;
+      //       // Save result
+
+      //       const img = new Image();
+      //       img.src = url;
+      //       document.body.appendChild(img);
+      //       // Make URL src of image and append to DOM
+      //     });
+      //   });
+
+      //   inputEl.addEventListener("change", () => {
+      //     const file = inputEl.files[0];
+      //     const fr = new FileReader();
+      //     fr.readAsDataURL(file);
+
+      //     fr.addEventListener("load", () => {
+      //       const url = fr.result;
+      //       localStorage.setItem("image", url);
+      //       // Saves image to localStorage
+      //     });
+      //   });
+
+      //   const url = localStorage.getItem("image");
+      //   // Get data URL from localStorage
+
+      //   const img = new Image();
+      //   images.src = url;
+      //   document.body.appendChild(img);
+    </script>
+  </body>
+</html>

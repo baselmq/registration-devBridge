@@ -6,6 +6,7 @@ const passField = document.querySelector(".password-field");
 const inputPass = document.getElementById("inputPassword");
 const errorField = document.querySelector(".email-pass-field");
 const emailPassError = document.querySelector(".email-pass-error");
+const forgePass = document.querySelector(".forget__pass");
 
 window.localStorage;
 
@@ -94,3 +95,33 @@ function decryptPassword(encryptedPassword, encryptionKey) {
   const decryptedData = sjcl.decrypt(encryptionKey, encryptedPassword);
   return decryptedData;
 }
+
+forgePass.addEventListener("click", function () {
+  window.location.href = "../pages/forget_password.html";
+});
+
+// Get the current date and time
+
+// Calculate the time difference in milliseconds
+const getEmail = window.sessionStorage.getItem("emailRest");
+let data = JSON.parse(localStorage.getItem(getEmail));
+var date1 = new Date(data.changePassDate);
+var date2 = new Date(); // Assuming current date and time
+
+// Calculate the time difference in milliseconds
+var timeDifference = Math.abs(date2 - date1);
+
+// Calculate the number of days
+var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+// Calculate the number of hours
+var hours = Math.floor(
+  (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+);
+
+// Calculate the number of minutes
+var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+console.log(
+  "Difference: " + days + " days, " + hours + " hours, " + minutes + " minutes"
+);

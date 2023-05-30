@@ -168,3 +168,13 @@ function getRandomQuestions(questions, count) {
   let uniqueQuestions = Array.from(new Set(shuffled)); // Remove duplicates
   return uniqueQuestions.slice(0, count);
 }
+let img = document.getElementById("image__user");
+
+function fetchImage() {
+  if (dataUser.image == undefined) {
+    img.src = "../assets/icon/user.svg";
+  } else {
+    img.src = dataUser.image;
+  }
+}
+fetchImage();

@@ -7,6 +7,7 @@
 @import url("report.css");
 @import url("registration_page.css");
 @import url("technical-test.css");
+@import url("otp_password.css");
 
 * {
   font-family: "Poppins", sans-serif;

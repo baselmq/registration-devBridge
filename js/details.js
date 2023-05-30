@@ -151,6 +151,16 @@ document
       }
     }
   });
+let img = document.getElementById("image__user");
+
+function fetchImage() {
+  if (dataUser.image == undefined) {
+    img.src = "../assets/icon/user.svg";
+  } else {
+    img.src = dataUser.image;
+  }
+}
+fetchImage();
 
 //   const firstNameInput = document.getElementById("validationFirstName");
 // const lastNameInput = document.getElementById("validationLastName");

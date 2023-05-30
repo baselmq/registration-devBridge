@@ -132,3 +132,6 @@
 .btn-custom-register:hover {
   border-color: #099289;
 }
+.forget__pass:hover{
+cursor: pointer;
+}
