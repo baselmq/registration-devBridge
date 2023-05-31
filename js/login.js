@@ -125,3 +125,21 @@ var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 console.log(
   "Difference: " + days + " days, " + hours + " hours, " + minutes + " minutes"
 );
+
+// function checkPass() {
+//   if (inputPass.value == "") {
+//     return passField.classList.add("invalid");
+//   } else {
+//     let list = JSON.parse(localStorage.getItem(inputEmail.value));
+//     const encryptionKey = "encryptionKey123";
+//     let pass = decryptPassword(list.oldPassword, encryptionKey);
+//     if (inputPass.value == pass) {
+//       emailPassError.textContent = "";
+//       emailPassError.textContent = `You Changed Your Password since ${DateForget()}`;
+
+//       return passField.classList.add("invalid");
+//     } else {
+//       passField.classList.remove("invalid");
+//     }
+//   }
+// }

@@ -6,28 +6,12 @@ const testContent = document.querySelector(".technical-test-all-content");
 const container = document.querySelector(".technical-test-container");
 const nextButton = document.querySelector(".technical-test-next-btn");
 
-const userEmail = "h@gmail.com"; // Change this to the user's email
 const TOTAL_QUESTIONS = 10;
 let selectedQuestions = getRandomQuestions(webTechQuestions, TOTAL_QUESTIONS);
 let currentQuestionIndex = 0;
 let technicalTestScore = 0;
 let startTime = null;
 let timerInterval = null;
-
-window.addEventListener("load", function () {
-  if (dataUser != undefined) {
-    startButton.addEventListener("click", startTechnicalTest);
-    nextButton.addEventListener("click", function () {
-      if (currentQuestionIndex < selectedQuestions.length - 1) {
-        checkAnswer();
-      } else {
-        finishQuiz();
-      }
-    });
-  } else {
-    window.location.href = "../pages/login.html";
-  }
-});
 
 startButton.addEventListener("click", startTechnicalTest);
 nextButton.addEventListener("click", function () {
